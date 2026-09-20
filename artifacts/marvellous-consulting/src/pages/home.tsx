@@ -6,7 +6,6 @@ import { ProcessOverview } from "@/components/process-overview"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { Button } from "@/components/ui/button"
 import { Link } from "wouter"
-import { Layers } from "lucide-react"
 
 export default function Home() {
   return (
@@ -21,38 +20,34 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="right">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border p-8 flex items-center justify-center">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border">
                 <img 
                   src="/images/erp-delivery-workshop.jpg" 
-                  alt="ERP Delivery Workshop" 
-                  className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 dark:opacity-30" 
+                  alt="ERP project team reviewing a process diagram together" 
+                  className="absolute inset-0 w-full h-full object-cover" 
                 />
-                <div className="relative z-10 w-full max-w-sm mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-2xl" />
-                  <div className="relative bg-background/90 backdrop-blur-md p-8 rounded-xl shadow-xl border border-border text-center">
-                    <Layers className="size-12 text-primary mx-auto mb-4" />
-                    <h4 className="font-serif font-medium text-xl text-foreground mb-2">Centralized Accountability</h4>
-                    <p className="text-sm text-muted-foreground">Regardless of the delivery path, we maintain strategic oversight.</p>
-                  </div>
+                <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[17rem] z-10 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-border">
+                  <h3 className="font-serif font-medium text-lg text-foreground mb-1">A Clear Point of Contact</h3>
+                  <p className="text-xs leading-relaxed text-muted-foreground">We connect your business stakeholders and delivery team, keeping requirements, decisions, and next steps clear.</p>
                 </div>
               </div>
             </ScrollReveal>
             
             <ScrollReveal direction="left" className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
-                Software must serve the business, not the reverse.
+                Your business goals shape the solution.
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Most ERP implementations fail because they focus on the technology rather than the underlying business processes. A poor process digitized is still a poor process—it just happens faster.
+                  A successful ERP project starts with understanding how your business works: where teams lose time, where information gets disconnected, and what needs to improve.
                 </p>
                 <p>
-                  We act as your strategic lead. By separating discovery and architecture from the raw development execution, we guarantee that the final system is objectively designed to meet your commercial requirements.
+                  We turn those insights into clear requirements and practical solution decisions. We then work with the selected implementation team to keep delivery aligned with your priorities, from planning through go-live.
                 </p>
               </div>
               <div className="pt-4">
                 <Button asChild variant="outline" className="h-12 px-6">
-                  <Link href="/about">Read our philosophy</Link>
+                  <Link href="/odoo">Our Approach</Link>
                 </Button>
               </div>
             </ScrollReveal>

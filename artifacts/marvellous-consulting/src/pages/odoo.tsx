@@ -3,23 +3,25 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { CtaSection } from "@/components/cta-section"
 import { FAQSection } from "@/components/faq-section"
 import { Layers, CheckCircle2 } from "lucide-react"
+import { Link } from "wouter"
+import { Button } from "@/components/ui/button"
 
 const faqs = [
   {
     question: "Why hire an advisory firm rather than going direct to a developer?",
-    answer: "Developers build what they are asked to build. Without an independent strategic lead translating business requirements into a rigid technical scope, projects often suffer from 'scope creep' or result in a system that doesn't actually fit the business workflow. We provide that critical buffer and architecture."
+    answer: "We help translate your business requirements into a practical scope before implementation begins. This gives your team and the implementation partner a clearer basis for decisions, priorities, and progress reviews."
   },
   {
     question: "What is your relationship with Odoo?",
-    answer: "We are an independent advisory and implementation coordination firm. This vendor-independence allows us to design architectures objectively, selecting the best delivery partners or modules without quotas or vendor pressure."
+    answer: "We help you assess whether Odoo and the proposed implementation approach fit your requirements. We discuss the criteria for selecting a delivery partner and clarify commercial arrangements before you commit."
   },
   {
     question: "How do you choose the delivery partner?",
-    answer: "If the project requires external resources, we rely on a curated network of specialist delivery partners. We select them based on their specific industry expertise and technical capability to meet your exact scoped requirements."
+    answer: "We consider relevant industry experience, technical capability, availability, budget, and how the team works with your stakeholders. The final selection is agreed with you."
   },
   {
-    question: "Who holds the accountability for the project's success?",
-    answer: "We do. Marvellous Consulting acts as the primary strategic and commercial coordinator, ensuring clear contractual and operational responsibility throughout the implementation and into ongoing support."
+    question: "Who is responsible for delivery?",
+    answer: "We coordinate requirements, decisions, and progress with your team. Your implementation partner is responsible for the delivery work it agrees to perform. We clarify roles and responsibilities before the project starts."
   }
 ]
 
@@ -66,10 +68,10 @@ export default function OdooPractice() {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Most failed ERP implementations share a common trait: rushing to development before the business operations are fully mapped and optimized.
+                  Start by understanding your workflows, priorities, and the problems the ERP needs to solve. Those findings help shape the scope and the delivery plan.
                 </p>
                 <p>
-                  Our role is to own the discovery, solution strategy, and commercial coordination. By decoupling the strategic advisory from the raw technical development, we ensure the final system serves the business objectives, regardless of whether it's built by an internal team or a specialist partner.
+                  We help define requirements and coordinate with the implementation team as they configure and deliver the solution. Together, we review decisions against your business priorities through go-live.
                 </p>
               </div>
             </ScrollReveal>
@@ -96,10 +98,10 @@ export default function OdooPractice() {
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
-              Accountable Delivery Models
+              Delivery Options
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Marvellous Consulting leads business development, discovery, solution strategy, scope assessment, and commercial coordination. We maintain clear contractual and operational responsibility in either mode.
+              We help clarify the work to be done and coordinate with the team carrying it out. The right approach depends on your needs and the expertise already available to you.
             </p>
           </ScrollReveal>
 
@@ -143,7 +145,7 @@ export default function OdooPractice() {
                   <h3 className="text-sm font-bold uppercase tracking-widest text-secondary mb-3">Mode B</h3>
                   <h4 className="text-2xl font-serif font-medium text-foreground mb-4">Internal Team</h4>
                   <p className="text-muted-foreground text-base leading-relaxed">
-                    Appropriately resourced internal teams are utilized when the required capabilities are available internally for:
+                    If your business already has an in-house ERP team, we can help coordinate requirements and priorities for work such as:
                   </p>
                 </div>
                 
@@ -166,11 +168,24 @@ export default function OdooPractice() {
         </div>
       </section>
 
+      <section id="partners" className="scroll-mt-24 py-20 bg-background border-b border-border">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <ScrollReveal className="space-y-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-primary">For Partners</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">Work with us on ERP delivery.</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We work with implementation partners who bring relevant industry and technical expertise. We help clients define requirements and priorities, then coordinate with the selected team during delivery. If your team supports ERP implementation, tell us about your experience and the projects you are best suited to deliver.
+            </p>
+            <Button asChild variant="outline" className="h-12 px-6"><Link href="/contact">Get in Touch</Link></Button>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <FAQSection items={faqs} />
       
       <CtaSection 
         title="Ready to unify your operations?"
-        description="Whether you are outgrowing legacy software or rescuing a failed implementation, we can coordinate the path forward."
+        description="Whether you are outgrowing legacy software or improving an existing implementation, let’s discuss your requirements and a practical next step."
       />
     </div>
   )

@@ -9,7 +9,7 @@ export default function About() {
     <div className="pt-24 min-h-screen">
       <SEO 
         title="About the Firm" 
-        description="Marvellous Consulting is an independent ERP advisory, solution design, and implementation coordination firm."
+        description="Marvellous Consulting helps businesses plan ERP solutions and coordinate implementation."
       />
       
       {/* Hero Section */}
@@ -67,9 +67,9 @@ export default function About() {
                 <div className="mx-auto w-16 h-16 bg-background rounded-2xl flex items-center justify-center border border-border shadow-sm mb-6">
                   <Award className="size-8 text-secondary" />
                 </div>
-                <h3 className="text-xl font-serif font-medium text-foreground">Vendor Independence</h3>
+                <h3 className="text-xl font-serif font-medium text-foreground">Business-First Advice</h3>
                 <p className="text-muted-foreground">
-                  Our loyalty is strictly to your operational success. We design the architecture that fits your needs first, keeping software vendors and specialist developers accountable to the commercial goal.
+                  We start with your business requirements and explain the reasoning behind solution and partner recommendations. We clarify roles and commercial arrangements as part of the planning process.
                 </p>
               </div>
             </ScrollReveal>

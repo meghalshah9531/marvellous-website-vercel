@@ -7,17 +7,13 @@ interface CtaSectionProps {
   description?: string;
   primaryButtonText?: string;
   primaryButtonHref?: string;
-  secondaryButtonText?: string;
-  secondaryButtonHref?: string;
 }
 
 export function CtaSection({
-  title = "Ready to define the right ERP delivery path?",
-  description = "Schedule a consultation to clarify your requirements, solution architecture, delivery model, and next steps.",
-  primaryButtonText = "Request a Consultation",
+  title = "Planning an ERP project—or struggling with your current system?",
+  description = "Let’s discuss your business, the challenges you’re facing, and what you need from your ERP. We’ll help identify a practical next step.",
+  primaryButtonText = "Discuss Your Project",
   primaryButtonHref = "/contact",
-  secondaryButtonText = "Learn about our Firm",
-  secondaryButtonHref = "/about"
 }: CtaSectionProps) {
   return (
     <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
@@ -37,11 +33,6 @@ export function CtaSection({
             <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto h-12 px-8 text-base">
               <Link href={primaryButtonHref}>{primaryButtonText}</Link>
             </Button>
-            {secondaryButtonText && secondaryButtonHref && (
-              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto h-12 px-8 text-base bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                <Link href={secondaryButtonHref}>{secondaryButtonText}</Link>
-              </Button>
-            )}
           </div>
         </ScrollReveal>
       </div>
