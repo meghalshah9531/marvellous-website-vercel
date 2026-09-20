@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -7,10 +7,7 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 
 import Home from '@/pages/home';
-import OdooPractice from '@/pages/odoo';
 import About from '@/pages/about';
-import HowWeWork from '@/pages/how-we-work';
-import ForPartners from '@/pages/for-partners';
 import Contact from '@/pages/contact';
 import PrivacyPolicy from '@/pages/privacy';
 import TermsOfService from '@/pages/terms';
@@ -33,10 +30,10 @@ function Router() {
         <RoutedErrorBoundary>
           <Switch>
             <Route path="/" component={Home} />
-            <Route path="/odoo" component={OdooPractice} />
+            <Route path="/odoo">{() => <LegacySectionRedirect section="erp-delivery" />}</Route>
             <Route path="/about" component={About} />
-            <Route path="/how-we-work" component={HowWeWork} />
-            <Route path="/for-partners" component={ForPartners} />
+            <Route path="/how-we-work">{() => <LegacySectionRedirect section="how-we-work" />}</Route>
+            <Route path="/for-partners">{() => <LegacySectionRedirect section="erp-delivery" />}</Route>
             <Route path="/contact" component={Contact} />
             <Route path="/privacy" component={PrivacyPolicy} />
             <Route path="/terms" component={TermsOfService} />
@@ -52,6 +49,11 @@ function Router() {
 function RoutedErrorBoundary({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   return <ErrorBoundary resetKey={location}>{children}</ErrorBoundary>;
+}
+
+function LegacySectionRedirect({ section }: { section: string }) {
+  useEffect(() => { window.location.replace(`/#${section}`) }, [section]);
+  return null;
 }
 
 function App() {

@@ -3,6 +3,10 @@
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

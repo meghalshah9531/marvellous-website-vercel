@@ -26,12 +26,12 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-medium text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/how-we-work" className="text-muted-foreground hover:text-primary transition-colors">How We Work</Link></li>
+              <li><a href="/#how-we-work" className="text-muted-foreground hover:text-primary transition-colors">How We Work</a></li>
               <li>
-                <Link href="/odoo" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group">
-                  ERP Advisory & Delivery
+                <a href="/#erp-delivery" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group">
+                  ERP Delivery
                   <ArrowRight className="size-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group">
@@ -45,7 +45,6 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-medium text-lg mb-6">Firm</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/for-partners" className="text-muted-foreground hover:text-primary transition-colors">For Partners</Link></li>
               <li>
                 <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About the Partners

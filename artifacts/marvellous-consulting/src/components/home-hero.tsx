@@ -48,7 +48,7 @@ export function HomeHero() {
               <Link href="/contact">Discuss Your ERP Project</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-12 px-8 text-base shadow-sm">
-              <Link href="/how-we-work">How We Work</Link>
+              <a href="/#how-we-work">How We Work</a>
             </Button>
           </ScrollReveal>
 

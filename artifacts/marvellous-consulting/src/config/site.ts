@@ -30,18 +30,6 @@ export const siteConfig = {
       bio: "Overseeing the execution phase, they ensure clear contractual and operational responsibility whether the project is delivered through a specialist partner or an internal team."
     }
   },
-  testimonials: [
-    {
-      quote: "{{TESTIMONIAL_1_QUOTE}}",
-      author: "{{TESTIMONIAL_1_AUTHOR}}",
-      company: "{{TESTIMONIAL_1_COMPANY}}"
-    },
-    {
-      quote: "{{TESTIMONIAL_2_QUOTE}}",
-      author: "{{TESTIMONIAL_2_AUTHOR}}",
-      company: "{{TESTIMONIAL_2_COMPANY}}"
-    }
-  ],
   disclaimer: {
     odoo: "Odoo is a registered trademark of Odoo S.A. Marvellous Consulting is an independent advisory and implementation coordination partner and is not directly affiliated with Odoo S.A."
   }

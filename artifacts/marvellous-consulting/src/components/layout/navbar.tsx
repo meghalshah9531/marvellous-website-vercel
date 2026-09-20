@@ -7,26 +7,51 @@ import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/how-we-work", label: "How We Work" },
-  { href: "/odoo", label: "ERP Advisory & Delivery" },
+  { href: "/#home", label: "Home", section: "home" },
+  { href: "/#how-we-work", label: "How We Work", section: "how-we-work" },
+  { href: "/#erp-delivery", label: "ERP Delivery", section: "erp-delivery" },
   { href: "/about", label: "About Firm" },
-  { href: "/for-partners", label: "For Partners" },
 ]
 
 export function Navbar() {
   const [location] = useLocation()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("home")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    let frame = 0
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 10)
+        if (window.location.pathname !== "/") return
+        const sections = ["home", "how-we-work", "erp-delivery", "contact-us"]
+        const threshold = 140
+        const visible = sections.reduce((current, section) => {
+          const element = document.getElementById(section)
+          return element && element.getBoundingClientRect().top <= threshold ? section : current
+        }, "home")
+        setActiveSection(visible)
+      })
     }
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("resize", handleScroll)
+    handleScroll()
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", handleScroll)
+    }
+  }, [location])
+
+  useEffect(() => {
+    if (location !== "/" || !window.location.hash) return
+    const id = window.location.hash.slice(1)
+    const frame = requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView())
+    return () => cancelAnimationFrame(frame)
+  }, [location])
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -58,18 +83,24 @@ export function Navbar() {
             <ul className="flex items-center gap-3 lg:gap-5 text-xs lg:text-sm font-medium">
               {navLinks.map((link) => (
                 <li key={link.href}>
+                  {(() => {
+                    const active = link.section ? location === "/" && activeSection === link.section : location === link.href
+                    return (
                   <a
                     href={link.href}
+                    aria-current={active ? "location" : undefined}
                     className={cn(
                       "transition-colors hover:text-primary relative py-1",
-                      location === link.href ? "text-primary" : "text-muted-foreground"
+                      active ? "text-primary" : "text-muted-foreground"
                     )}
                   >
                     {link.label}
-                    {location === link.href && (
+                    {active && (
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-secondary rounded-full" />
                     )}
                   </a>
+                    )
+                  })()}
                 </li>
               ))}
             </ul>
@@ -84,8 +115,8 @@ export function Navbar() {
                 <Sun aria-hidden="true" className="size-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon aria-hidden="true" className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
-              <Button asChild variant="secondary" className="font-medium">
-                <Link href="/contact">Consultation</Link>
+              <Button asChild variant="secondary" className={cn("font-medium", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary ring-offset-2 ring-offset-background")}>
+                <a href="/#contact-us" aria-current={location === "/" && activeSection === "contact-us" ? "location" : undefined}>Contact Us</a>
               </Button>
             </div>
           </nav>
@@ -125,15 +156,15 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
                   "block py-2 text-lg font-medium transition-colors",
-                  location === link.href ? "text-primary font-semibold" : "text-foreground"
+                  (link.section ? location === "/" && activeSection === link.section : location === link.href) ? "text-primary font-semibold" : "text-foreground"
                 )}
               >
                 {link.label}
               </a>
             ))}
             <div className="pt-4 border-t border-border">
-              <Button asChild variant="secondary" className="w-full justify-center">
-                <Link href="/contact">Schedule Consultation</Link>
+              <Button asChild variant="secondary" className={cn("w-full justify-center", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary")}>
+                <a href="/#contact-us" aria-current={location === "/" && activeSection === "contact-us" ? "location" : undefined} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</a>
               </Button>
             </div>
           </nav>

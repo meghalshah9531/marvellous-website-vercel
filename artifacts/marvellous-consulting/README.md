@@ -24,7 +24,7 @@ The Vercel Function in `api/contact.js` accepts `/api/contact` submissions and s
 
 ## Configuration
 
-All business-specific copy, contact details, partner bios, and testimonials are centralized in `src/config/site.ts`.
+Business-specific copy, contact details, and partner bios are centralized in `src/config/site.ts`.
 Edit this file and replace all `{{PLACEHOLDER}}` values with real data before deploying.
 
 ## Theming
