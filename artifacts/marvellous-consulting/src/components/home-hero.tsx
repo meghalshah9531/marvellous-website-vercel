@@ -8,7 +8,7 @@ export function HomeHero() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28 bg-card">
       <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] overflow-hidden pointer-events-none" aria-hidden="true">
-        <img src="/images/erp-advisory-hero.jpg" alt="" className="w-full h-full object-cover object-right scale-[3.2] origin-right opacity-60 dark:opacity-45" />
+        <img src="/images/erp-advisory-hero.jpg" alt="" className="w-full h-full object-cover object-right scale-[2.7] origin-right opacity-60 dark:opacity-45" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/35 dark:to-card/65 pointer-events-none" aria-hidden="true" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
