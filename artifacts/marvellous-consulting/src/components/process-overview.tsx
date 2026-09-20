@@ -34,7 +34,7 @@ export function ProcessOverview() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-10 space-y-4">
           <p className="text-sm font-bold uppercase tracking-widest text-secondary">How We Work</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground leading-tight">
+          <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">
             From business requirements to a clear implementation plan.
           </h2>
         </div>

@@ -10,7 +10,7 @@ export function ErpDelivery() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">ERP Delivery</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight mb-6">
                 Execution without architecture is risk.
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -48,7 +48,7 @@ export function ErpDelivery() {
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal className="max-w-4xl mb-12 space-y-4">
             <p className="text-sm font-bold uppercase tracking-widest text-secondary">The Delivery Team</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground leading-tight">
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">
               Delivery Options
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">

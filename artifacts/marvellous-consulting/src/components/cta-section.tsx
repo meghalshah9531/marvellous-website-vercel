@@ -16,18 +16,18 @@ export function CtaSection({
   primaryButtonHref = "/contact",
 }: CtaSectionProps) {
   return (
-    <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-24 bg-primary dark:bg-card text-primary-foreground dark:text-primary relative overflow-hidden">
       {/* Abstract decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-background/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <ScrollReveal className="max-w-3xl space-y-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-secondary">Consult us</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-primary-foreground dark:text-primary">Consult us</p>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight">
             {title}
           </h2>
-          <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl">
+          <p className="text-primary-foreground/85 dark:text-primary/85 text-lg md:text-xl max-w-2xl">
             {description}
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
