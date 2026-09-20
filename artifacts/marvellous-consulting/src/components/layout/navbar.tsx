@@ -8,8 +8,10 @@ import { siteConfig } from "@/config/site"
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/#how-we-work", label: "How We Work" },
   { href: "/odoo", label: "ERP Advisory & Delivery" },
   { href: "/about", label: "About Firm" },
+  { href: "/odoo#partners", label: "For Partners" },
 ]
 
 export function Navbar() {
@@ -52,11 +54,11 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <ul className="flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+            <ul className="flex items-center gap-3 lg:gap-5 text-xs lg:text-sm font-medium">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <a
                     href={link.href}
                     className={cn(
                       "transition-colors hover:text-primary relative py-1",
@@ -67,20 +69,20 @@ export function Navbar() {
                     {location === link.href && (
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-secondary rounded-full" />
                     )}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center gap-4 border-l border-border pl-6">
+            <div className="flex items-center gap-2 border-l border-border pl-3 lg:pl-5">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                className="text-muted-foreground hover:text-foreground"
-                aria-label="Toggle theme"
+                className="size-8 shrink-0 text-muted-foreground/70 hover:text-foreground"
+                aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
               >
-                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <Sun aria-hidden="true" className="size-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <Moon aria-hidden="true" className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
               <Button asChild variant="secondary" className="font-medium">
                 <Link href="/contact">Consultation</Link>
@@ -94,10 +96,11 @@ export function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="text-muted-foreground hover:text-foreground"
+              className="size-8 text-muted-foreground/70 hover:text-foreground"
+              aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
             >
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun aria-hidden="true" className="size-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon aria-hidden="true" className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
             <Button
               variant="ghost"
@@ -116,16 +119,17 @@ export function Navbar() {
         <div className="absolute top-full left-0 w-full bg-background border-b border-border shadow-lg md:hidden">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link 
+              <a
                 key={link.href}
                 href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
                   "block py-2 text-lg font-medium transition-colors",
                   location === link.href ? "text-primary font-semibold" : "text-foreground"
                 )}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
             <div className="pt-4 border-t border-border">
               <Button asChild variant="secondary" className="w-full justify-center">
