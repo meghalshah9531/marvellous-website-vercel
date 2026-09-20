@@ -24,16 +24,19 @@ export function ErpDelivery() {
             </ScrollReveal>
             
             <ScrollReveal delay={0.2}>
-              <div className="relative aspect-square max-w-md mx-auto rounded-full bg-card border-2 border-primary/20 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-primary/5 animate-[pulse_4s_ease-in-out_infinite]" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full border border-primary/30 flex items-center justify-center">
-                  <div className="w-[60%] h-[60%] rounded-full bg-background border border-primary/40 shadow-xl flex items-center justify-center">
-                    <Layers className="size-16 text-primary" />
-                  </div>
+              <div className="relative aspect-square max-w-md mx-auto rounded-full bg-card border-2 border-primary/20 flex items-center justify-center overflow-hidden" aria-label="ERP delivery illustration with four orbiting elements" role="img">
+                <div aria-hidden="true" className="absolute inset-0 bg-primary/5 motion-safe:animate-[pulse_4s_ease-in-out_infinite]" />
+                <div aria-hidden="true" className="absolute inset-[8%] rounded-full border border-primary/25 motion-safe:animate-[spin_12s_linear_infinite]">
+                  <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 size-5 bg-primary rounded-full shadow-md" />
+                  <span className="absolute bottom-[15%] right-[15%] size-3 bg-secondary rounded-full shadow-sm" />
                 </div>
-                {/* Orbital dots */}
-                <div className="absolute top-0 w-4 h-4 bg-primary rounded-full blur-[2px] animate-[spin_6s_linear_infinite] origin-[50%_250px]" style={{ left: 'calc(50% - 8px)' }} />
-                <div className="absolute top-0 w-3 h-3 bg-secondary rounded-full animate-[spin_8s_linear_infinite_reverse] origin-[50%_200px]" style={{ left: 'calc(50% - 6px)' }} />
+                <div aria-hidden="true" className="absolute inset-[21%] rounded-full border border-secondary/30 motion-safe:animate-[spin_9s_linear_infinite_reverse]">
+                  <span className="absolute top-[12%] right-[12%] size-4 bg-secondary rounded-full shadow-sm" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 size-3 bg-primary/70 rounded-full" />
+                </div>
+                <div aria-hidden="true" className="relative size-[30%] rounded-full bg-background border border-primary/40 shadow-xl flex items-center justify-center">
+                  <Layers className="size-14 text-primary" />
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -43,7 +46,8 @@ export function ErpDelivery() {
       {/* Delivery options */}
       <section className="py-24 bg-card border-y border-border">
         <div className="container mx-auto px-4 md:px-6">
-          <ScrollReveal className="text-center max-w-4xl mx-auto mb-16 space-y-6">
+          <ScrollReveal className="max-w-4xl mb-12 space-y-4">
+            <p className="text-sm font-bold uppercase tracking-widest text-primary">The Delivery Team</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
               Delivery Options
             </h2>

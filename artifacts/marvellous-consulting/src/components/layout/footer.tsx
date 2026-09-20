@@ -1,6 +1,6 @@
 import { Link } from "wouter"
 import { siteConfig } from "@/config/site"
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
+import { ArrowRight, Linkedin, Mail, Phone } from "lucide-react"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -52,7 +52,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
+                  Consult us
                 </Link>
               </li>
             </ul>
@@ -61,13 +61,6 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-medium text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="size-4 shrink-0 mt-0.5 text-primary" />
-                <span>
-                  {siteConfig.address.street}<br />
-                  {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
-                </span>
-              </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="size-4 shrink-0 text-primary" />
                 <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, '')}`} className="hover:text-primary transition-colors">
@@ -78,6 +71,12 @@ export function Footer() {
                 <Mail className="size-4 shrink-0 text-primary" />
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-primary transition-colors">
                   {siteConfig.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Linkedin className="size-4 shrink-0 text-primary" aria-hidden="true" />
+                <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Marvellous Consulting on LinkedIn">
+                  LinkedIn
                 </a>
               </li>
             </ul>

@@ -27,11 +27,11 @@ export function ProcessOverview() {
   return (
     <section id="how-we-work" className="scroll-mt-24 py-20 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-primary">How We Work</h2>
-          <h3 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
+        <div className="max-w-3xl mb-10 space-y-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-primary">How We Work</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
             From business requirements to a clear implementation plan.
-          </h3>
+          </h2>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
