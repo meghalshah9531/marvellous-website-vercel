@@ -21,14 +21,14 @@ export function HomeHero() {
               </span>
               Open to ERP Consulting Projects
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] text-primary tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl hero-slogan font-medium font-semibold leading-[1.1] text-foreground tracking-tight">
               The right ERP solution. <br className="hidden md:block" />
               <span className="text-secondary">The right implementation partner.</span>
             </h1>
           </ScrollReveal>
           
           <ScrollReveal delay={0.1}>
-            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed max-w-3xl pl-6 py-2">
+            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed max-w-3xl py-2">
               We help you turn business requirements into a clear ERP plan, select an implementation partner with relevant industry expertise, and guide your project from discovery to go-live.
             </p>
             <p className="text-lg md:text-xl text-primary/85 dark:text-primary max-w-3xl mt-5">
