@@ -23,8 +23,8 @@ export function CtaSection({
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <ScrollReveal className="max-w-3xl space-y-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-primary-foreground/80">Consult us</p>
-          <h2 className="text-3xl md:text-4xl font-serif font-medium leading-tight">
+          <p className="text-sm font-bold uppercase tracking-widest text-secondary">Consult us</p>
+          <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight">
             {title}
           </h2>
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl">

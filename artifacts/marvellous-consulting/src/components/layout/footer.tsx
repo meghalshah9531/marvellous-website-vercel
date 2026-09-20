@@ -6,15 +6,15 @@ export function Footer() {
   const year = new Date().getFullYear()
   
   return (
-    <footer className="bg-card border-t border-border pt-16 pb-8">
+    <footer className="bg-card border-t border-border pt-10 pb-5">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-3">
               <div className="size-8 rounded-sm bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg">
                 M
               </div>
-              <span className="font-serif font-semibold text-xl">
+              <span className="font-serif font-semibold text-lg">
                 Marvellous
               </span>
             </Link>
@@ -24,7 +24,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-serif font-medium text-lg mb-6">Services</h4>
+            <h4 className="font-serif font-semibold text-base mb-4">Services</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="/#how-we-work" className="text-muted-foreground hover:text-primary transition-colors">How We Work</a></li>
               <li>
@@ -43,11 +43,11 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-serif font-medium text-lg mb-6">Firm</h4>
+            <h4 className="font-serif font-semibold text-base mb-4">Firm</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About the Partners
+                  About Us
                 </Link>
               </li>
               <li>
@@ -59,8 +59,8 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-serif font-medium text-lg mb-6">Contact</h4>
-            <ul className="space-y-4 text-sm">
+            <h4 className="font-serif font-semibold text-base mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="size-4 shrink-0 text-primary" />
                 <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, '')}`} className="hover:text-primary transition-colors">
@@ -83,10 +83,10 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border/50 text-xs text-muted-foreground space-y-4">
+        <div className="pt-5 border-t border-border/50 text-xs text-muted-foreground space-y-3">
           <p className="max-w-4xl">{siteConfig.disclaimer.odoo}</p>
           
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-2">
             <p>&copy; {year} {siteConfig.name}. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>

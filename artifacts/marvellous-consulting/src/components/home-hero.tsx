@@ -11,7 +11,7 @@ export function HomeHero() {
         <img 
           src="/images/erp-advisory-hero.jpg" 
           alt="ERP Advisory Workshop" 
-          className="w-full h-full object-cover opacity-[0.15] dark:opacity-[0.25] mix-blend-luminosity"
+          className="w-full h-full object-cover brightness-[0.7] opacity-[0.28] dark:opacity-[0.36]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-transparent" />
       </div>
@@ -35,7 +35,7 @@ export function HomeHero() {
           </ScrollReveal>
           
           <ScrollReveal delay={0.1}>
-            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed max-w-3xl border-l-4 border-primary pl-6 py-2">
+            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed max-w-3xl border-l-4 border-secondary pl-6 py-2">
               We help you turn business requirements into a clear ERP plan, select an implementation partner with relevant industry expertise, and guide your project from discovery to go-live.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mt-5">

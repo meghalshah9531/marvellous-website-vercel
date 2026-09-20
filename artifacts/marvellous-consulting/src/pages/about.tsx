@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="pt-24 min-h-screen">
       <SEO 
-        title="About the Firm" 
+        title="About Us" 
         description="Marvellous Consulting helps businesses plan ERP solutions and coordinate implementation."
       />
       

@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/#home", label: "Home", section: "home" },
   { href: "/#how-we-work", label: "How We Work", section: "how-we-work" },
   { href: "/#erp-delivery", label: "ERP Delivery", section: "erp-delivery" },
-  { href: "/about", label: "About Firm" },
+  { href: "/about", label: "About Us" },
 ]
 
 export function Navbar() {

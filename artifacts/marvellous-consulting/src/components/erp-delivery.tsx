@@ -9,8 +9,8 @@ export function ErpDelivery() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
-              <p className="text-sm font-bold uppercase tracking-widest text-primary mb-4">ERP Delivery</p>
-              <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
+              <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">ERP Delivery</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
                 Execution without architecture is risk.
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
@@ -47,8 +47,8 @@ export function ErpDelivery() {
       <section className="py-24 bg-card border-y border-border">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal className="max-w-4xl mb-12 space-y-4">
-            <p className="text-sm font-bold uppercase tracking-widest text-primary">The Delivery Team</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
+            <p className="text-sm font-bold uppercase tracking-widest text-secondary">The Delivery Team</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold text-foreground leading-tight">
               Delivery Options
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -79,7 +79,7 @@ export function ErpDelivery() {
                     "Budget alignment"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-base text-foreground">
-                      <CheckCircle2 className="size-5 text-primary shrink-0 mt-0.5" />
+                  <CheckCircle2 className="size-5 text-secondary shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
