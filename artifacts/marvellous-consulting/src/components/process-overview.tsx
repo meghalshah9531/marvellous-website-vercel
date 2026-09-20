@@ -30,8 +30,9 @@ export function ProcessOverview() {
   ]
 
   return (
-    <section id="how-we-work" className="scroll-mt-24 py-20 bg-card border-b border-border">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="how-we-work" className="relative overflow-hidden scroll-mt-24 py-20 bg-card border-b border-border">
+      <img src="/images/erp-delivery-workshop.jpg" alt="" aria-hidden="true" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.07] dark:opacity-[0.04] pointer-events-none" />
+      <div className="relative container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-10 space-y-4">
           <p className="text-sm font-bold uppercase tracking-widest text-secondary">How We Work</p>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">

@@ -6,11 +6,13 @@ import { siteConfig } from "@/config/site"
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24 bg-card">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+    <section className="relative overflow-hidden py-20 lg:py-28 bg-card">
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[55%] overflow-hidden pointer-events-none" aria-hidden="true">
+        <img src="/images/erp-advisory-hero.jpg" alt="" className="w-full h-full object-cover object-right scale-[3.2] origin-right opacity-60 dark:opacity-45" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/35 dark:to-card/65 pointer-events-none" aria-hidden="true" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] items-center gap-10 xl:gap-16">
-        <div className="space-y-8">
+        <div className="max-w-4xl space-y-8">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-sm font-medium mb-4">
               <span className="relative flex h-2 w-2">
@@ -19,7 +21,7 @@ export function HomeHero() {
               </span>
               Open to ERP Consulting Projects
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-5xl xl:text-6xl font-serif font-semibold leading-[1.1] text-primary tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.1] text-primary tracking-tight">
               The right ERP solution. <br className="hidden md:block" />
               <span className="text-secondary">The right implementation partner.</span>
             </h1>
@@ -67,11 +69,6 @@ export function HomeHero() {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-        <div className="relative rounded-3xl overflow-hidden border border-border shadow-xl bg-background aspect-[5/4] lg:aspect-[4/5] max-h-[680px]">
-          <img src="/images/erp-advisory-hero.jpg" alt="ERP consultant presenting a solution to business stakeholders" className="w-full h-full object-cover object-[55%_center] brightness-[0.9] dark:brightness-[0.8]" />
-          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-primary/25 via-transparent to-transparent" />
-        </div>
         </div>
       </div>
     </section>
