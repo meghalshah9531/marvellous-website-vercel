@@ -9,6 +9,8 @@ import { Footer } from '@/components/layout/footer';
 import Home from '@/pages/home';
 import OdooPractice from '@/pages/odoo';
 import About from '@/pages/about';
+import HowWeWork from '@/pages/how-we-work';
+import ForPartners from '@/pages/for-partners';
 import Contact from '@/pages/contact';
 import PrivacyPolicy from '@/pages/privacy';
 import TermsOfService from '@/pages/terms';
@@ -33,6 +35,8 @@ function Router() {
             <Route path="/" component={Home} />
             <Route path="/odoo" component={OdooPractice} />
             <Route path="/about" component={About} />
+            <Route path="/how-we-work" component={HowWeWork} />
+            <Route path="/for-partners" component={ForPartners} />
             <Route path="/contact" component={Contact} />
             <Route path="/privacy" component={PrivacyPolicy} />
             <Route path="/terms" component={TermsOfService} />

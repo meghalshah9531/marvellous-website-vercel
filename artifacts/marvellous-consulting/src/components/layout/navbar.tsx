@@ -8,10 +8,10 @@ import { siteConfig } from "@/config/site"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/#how-we-work", label: "How We Work" },
+  { href: "/how-we-work", label: "How We Work" },
   { href: "/odoo", label: "ERP Advisory & Delivery" },
   { href: "/about", label: "About Firm" },
-  { href: "/odoo#partners", label: "For Partners" },
+  { href: "/for-partners", label: "For Partners" },
 ]
 
 export function Navbar() {
