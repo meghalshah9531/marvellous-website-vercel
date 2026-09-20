@@ -20,7 +20,7 @@ Boutique firm providing ERP advisory, solution design, and implementation coordi
 6. Replace the remaining `{{...}}` business and legal placeholders in `src/config/site.ts` and the site's legal pages before public launch. Submit a real contact form on the deployed domain and confirm delivery and Reply-To.
 7. In Vercel's Firewall, add a rate-limit rule for `POST /api/contact` (for example, 5 requests per IP per 10 minutes) and publish the rule. Monitor legitimate enquiries and adjust the threshold if needed. Origin checks and the hidden spam field are useful filters, but are not a substitute for rate limiting.
 
-The Vercel Function in `api/contact.ts` accepts `/api/contact` submissions and sends them through Resend. It returns an error when delivery is unavailable, so the form cannot show a false success. The deployment package excludes the original unused API server and mockup app.
+The Vercel Function in `api/contact.js` accepts `/api/contact` submissions and sends them through Resend. It returns an error when delivery is unavailable, so the form cannot show a false success. The deployment package excludes the original unused API server and mockup app.
 
 ## Configuration
 
