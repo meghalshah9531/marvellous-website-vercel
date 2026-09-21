@@ -13,7 +13,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-3">
               <img src="/images/logo-mark.png" alt="" className="size-8 object-contain" />
               <span className="font-serif font-semibold text-lg">
-                Marvellous
+                Marvellous Consulting
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
