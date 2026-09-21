@@ -39,7 +39,7 @@ export function ProcessOverview() {
           </h2>
         </div>
 
-        <div ref={sequenceRef} className="relative max-w-6xl">
+        <div ref={sequenceRef} className="relative">
           <div aria-hidden="true" className="absolute left-8 top-8 bottom-8 w-px bg-border lg:hidden" />
           <div aria-hidden="true" className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-border" />
           {!reduceMotion && (

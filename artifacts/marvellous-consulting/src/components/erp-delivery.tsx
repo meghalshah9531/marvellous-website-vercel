@@ -56,7 +56,7 @@ export function ErpDelivery() {
             </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Implementation Through a Specialist Partner",
