@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -22,9 +23,10 @@ import {
   SelectValue 
 } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { cn } from "@/lib/utils"
 import { useSubmitContact } from "@workspace/api-client-react"
 import { useToast } from "@/hooks/use-toast"
-import { Loader2 } from "lucide-react"
+import { CheckCircle2, Loader2 } from "lucide-react"
 import { ContactSidebar } from "@/components/contact-sidebar"
 
 const contactFormSchema = z.object({
@@ -46,6 +48,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>
 export default function Contact() {
   const { toast } = useToast()
   const submitContact = useSubmitContact()
+  const [justSubmitted, setJustSubmitted] = useState(false)
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -65,11 +68,9 @@ export default function Contact() {
       { data },
       {
         onSuccess: () => {
-          toast({
-            title: "Inquiry received",
-            description: "Your message has been sent. We will get back to you as soon as possible.",
-          })
           form.reset()
+          setJustSubmitted(true)
+          setTimeout(() => setJustSubmitted(false), 4000)
         },
         onError: () => {
           toast({
@@ -223,13 +224,21 @@ export default function Contact() {
                     )}
                   />
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full md:w-auto min-w-[200px]"
-                    disabled={submitContact.isPending}
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className={cn(
+                      "w-full md:w-auto min-w-[200px] transition-colors",
+                      justSubmitted && "bg-primary hover:bg-primary text-primary-foreground"
+                    )}
+                    disabled={submitContact.isPending || justSubmitted}
                   >
-                    {submitContact.isPending ? (
+                    {justSubmitted ? (
+                      <>
+                        <CheckCircle2 className="mr-2 h-4 w-4" />
+                        Message Sent
+                      </>
+                    ) : submitContact.isPending ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Submitting...
