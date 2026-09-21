@@ -56,6 +56,7 @@ export default {
     const key = process.env.RESEND_API_KEY;
     const recipient = process.env.CONTACT_EMAIL;
     const sender = process.env.CONTACT_FROM_EMAIL;
+    const cc = process.env.CONTACT_CC_EMAIL;
     if (!key || !recipient || !sender) {
       console.error("Contact email configuration is incomplete");
       return json({ error: "The contact form is temporarily unavailable. Please email us directly." }, 503);
@@ -69,6 +70,7 @@ export default {
         body: JSON.stringify({
           from: sender,
           to: [recipient],
+          ...(cc ? { cc: [cc] } : {}),
           reply_to: email,
           subject: `New ERP inquiry: ${labels[service]}`,
           html: `<h1>New ERP inquiry</h1><p><b>Name:</b> ${escapeHtml(name)}</p><p><b>Email:</b> ${escapeHtml(email)}</p><p><b>Phone:</b> ${escapeHtml(phone || "Not provided")}</p><p><b>Interest:</b> ${escapeHtml(labels[service])}</p><p><b>Message:</b></p><p>${escapeHtml(message).replaceAll("\n", "<br>")}</p>`,
