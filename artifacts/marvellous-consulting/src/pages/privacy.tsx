@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <div className="pt-32 pb-24 min-h-screen bg-background">
       <SEO title="Privacy Policy" description="Privacy policy for Marvellous Consulting." />
       
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl prose prose-neutral dark:prose-invert prose-headings:font-serif">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-3xl prose prose-neutral dark:prose-invert prose-headings:font-serif">
         <h1 className="text-4xl font-medium mb-8">Privacy Policy</h1>
         <p className="text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
         

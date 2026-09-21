@@ -31,7 +31,7 @@ export function ProcessOverview() {
 
   return (
     <section id="how-we-work" className="scroll-mt-24 py-20 bg-card border-b border-border">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="max-w-3xl mb-10 space-y-4">
           <p className="text-sm font-bold uppercase tracking-widest text-secondary">How We Work</p>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">

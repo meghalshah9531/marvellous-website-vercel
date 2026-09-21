@@ -5,7 +5,7 @@ import { Quote } from "lucide-react"
 export function TestimonialsSection() {
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-sm font-bold uppercase tracking-widest text-primary">Client Feedback</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-medium text-foreground">

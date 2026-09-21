@@ -11,7 +11,7 @@ export function HomeHero() {
         <img src="/images/erp-advisory-hero.jpg" alt="" className="w-full h-full object-cover object-right scale-[2.7] origin-right opacity-60 dark:opacity-45" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/35 dark:to-card/65 pointer-events-none" aria-hidden="true" />
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
         <div className="max-w-4xl space-y-8">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-sm font-medium mb-4">

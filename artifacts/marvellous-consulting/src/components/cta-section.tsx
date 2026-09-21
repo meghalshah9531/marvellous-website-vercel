@@ -21,7 +21,7 @@ export function CtaSection({
       <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-background/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
       
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
         <ScrollReveal className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight">
             {title}

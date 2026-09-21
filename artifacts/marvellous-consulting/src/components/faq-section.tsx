@@ -19,7 +19,7 @@ export function FAQSection({
 }: FAQSectionProps) {
   return (
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-4xl">
         <ScrollReveal className="text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">{title}</h2>
           <p className="text-muted-foreground text-lg">{subtitle}</p>

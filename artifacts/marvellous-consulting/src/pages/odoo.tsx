@@ -38,7 +38,7 @@ export default function OdooPractice() {
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="absolute bottom-0 right-0 w-1/2 h-full bg-primary/5 rounded-tl-full blur-3xl translate-y-1/4 translate-x-1/4 pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
           <div className="max-w-3xl space-y-6">
             <ScrollReveal>
               <div className="flex items-center gap-3 text-primary font-medium mb-4">
@@ -60,7 +60,7 @@ export default function OdooPractice() {
 
       {/* Philosophy */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6">
@@ -95,7 +95,7 @@ export default function OdooPractice() {
 
       {/* Accountable Delivery Models */}
       <section className="py-24 bg-card border-y border-border">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <ScrollReveal className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">
               Delivery Options
@@ -169,7 +169,7 @@ export default function OdooPractice() {
       </section>
 
       <section id="partners" className="scroll-mt-24 py-20 bg-background border-b border-border">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-4xl">
           <ScrollReveal className="space-y-6">
             <p className="text-sm font-bold uppercase tracking-widest text-primary">For Partners</p>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground">Work with us on ERP delivery.</h2>

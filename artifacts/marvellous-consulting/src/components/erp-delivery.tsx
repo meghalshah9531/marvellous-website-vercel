@@ -6,7 +6,7 @@ export function ErpDelivery() {
     <div>
       {/* ERP delivery illustration */}
       <section id="erp-delivery" className="scroll-mt-24 py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">ERP Delivery</p>
@@ -45,7 +45,7 @@ export function ErpDelivery() {
 
       {/* Delivery options */}
       <section className="py-24 bg-card border-y border-border">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <ScrollReveal className="max-w-4xl mb-12 space-y-4">
             <p className="text-sm font-bold uppercase tracking-widest text-secondary">The Delivery Team</p>
             <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">

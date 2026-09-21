@@ -92,7 +92,7 @@ export default function Contact() {
         description="Schedule a confidential consultation for ERP Advisory & Implementation Coordination."
       />
       
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 py-12 md:py-20">
         <ScrollReveal>
           <div className="max-w-2xl mx-auto text-center mb-16 space-y-4">
             <h1 className="text-4xl md:text-5xl font-serif font-medium text-foreground">

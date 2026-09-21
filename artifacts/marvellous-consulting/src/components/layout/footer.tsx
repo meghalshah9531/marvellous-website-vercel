@@ -7,7 +7,7 @@ export function Footer() {
   
   return (
     <footer className="bg-card border-t border-border pt-10 pb-5">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-3">

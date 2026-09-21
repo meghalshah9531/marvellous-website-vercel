@@ -23,7 +23,7 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent" />
         </div>
         
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <ScrollReveal>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-foreground">
@@ -42,7 +42,7 @@ export default function About() {
 
       {/* Our Values */}
       <section className="py-24 bg-card border-b border-border">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-serif font-medium text-center mb-16 text-foreground">
               Core Principles
@@ -91,7 +91,7 @@ export default function About() {
 
       {/* Leadership */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-5xl">
           <ScrollReveal>
             <div className="mb-12 text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-4">
