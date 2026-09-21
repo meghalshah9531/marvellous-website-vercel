@@ -11,9 +11,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <img src="/images/logo-mark.png" alt="" className="size-12 object-contain" />
-              <span className="font-serif font-semibold text-lg">
-                Marvellous Consulting
+              <img src="/images/logo-mark.png" alt="" className="h-10 w-10 object-contain" />
+              <span className="flex flex-col leading-none">
+                <span className="font-serif font-bold text-lg text-primary leading-none">Marvellous</span>
+                <span className="text-[10px] font-semibold tracking-[0.2em] text-primary leading-none mt-1">CONSULTING</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
