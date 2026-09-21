@@ -2,19 +2,21 @@ import { z } from "zod";
 
 const schema = z.object({
   name: z.string().trim().min(2).max(100),
+  companyName: z.string().trim().max(150).optional(),
   email: z.string().email().max(254),
   phone: z.string().max(40).optional(),
-  service: z.enum(["erp_advisory", "implementation_coordination", "system_audit", "other"]),
+  service: z.enum(["new_implementation", "improve_existing", "select_partner", "implementation_guidance", "partnership", "other"]),
   message: z.string().trim().min(10).max(5000),
-  consent: z.literal(true),
   website: z.string().max(200).optional(),
 });
 
 const labels = {
-  erp_advisory: "ERP Advisory & Strategy",
-  implementation_coordination: "Implementation Coordination",
-  system_audit: "System Audit & Rescue",
-  other: "General Inquiry",
+  new_implementation: "New ERP / Odoo Implementation",
+  improve_existing: "Improve an Existing System",
+  select_partner: "Select an Implementation Partner",
+  implementation_guidance: "Implementation Guidance",
+  partnership: "Partnership Opportunity",
+  other: "Other / Not Sure Yet",
 };
 
 function escapeHtml(value) {
@@ -62,7 +64,7 @@ export default {
       return json({ error: "The contact form is temporarily unavailable. Please email us directly." }, 503);
     }
 
-    const { name, email, phone, service, message } = result.data;
+    const { name, companyName, email, phone, service, message } = result.data;
     try {
       const delivery = await fetch("https://api.resend.com/emails", {
         method: "POST",
@@ -72,8 +74,8 @@ export default {
           to: [recipient],
           ...(cc ? { cc: [cc] } : {}),
           reply_to: email,
-          subject: `New ERP inquiry: ${labels[service]}`,
-          html: `<h1>New ERP inquiry</h1><p><b>Name:</b> ${escapeHtml(name)}</p><p><b>Email:</b> ${escapeHtml(email)}</p><p><b>Phone:</b> ${escapeHtml(phone || "Not provided")}</p><p><b>Interest:</b> ${escapeHtml(labels[service])}</p><p><b>Message:</b></p><p>${escapeHtml(message).replaceAll("\n", "<br>")}</p>`,
+          subject: `New enquiry: ${labels[service]}`,
+          html: `<h1>New enquiry</h1><p><b>Name:</b> ${escapeHtml(name)}</p>${companyName ? `<p><b>Company:</b> ${escapeHtml(companyName)}</p>` : ""}<p><b>Email:</b> ${escapeHtml(email)}</p><p><b>Phone:</b> ${escapeHtml(phone || "Not provided")}</p><p><b>Enquiry type:</b> ${escapeHtml(labels[service])}</p><p><b>Message:</b></p><p>${escapeHtml(message).replaceAll("\n", "<br>")}</p>`,
         }),
       });
       if (!delivery.ok) {

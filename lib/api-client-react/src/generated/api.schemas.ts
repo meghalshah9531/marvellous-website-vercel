@@ -13,9 +13,11 @@ export type ContactInquiryInputService = typeof ContactInquiryInputService[keyof
 
 
 export const ContactInquiryInputService = {
-  erp_advisory: 'erp_advisory',
-  implementation_coordination: 'implementation_coordination',
-  system_audit: 'system_audit',
+  new_implementation: 'new_implementation',
+  improve_existing: 'improve_existing',
+  select_partner: 'select_partner',
+  implementation_guidance: 'implementation_guidance',
+  partnership: 'partnership',
   other: 'other',
 } as const;
 
@@ -25,6 +27,8 @@ export interface ContactInquiryInput {
      * @maxLength 100
      */
   name: string;
+  /** @maxLength 150 */
+  companyName?: string;
   /** @maxLength 254 */
   email: string;
   /** @maxLength 40 */
@@ -35,7 +39,6 @@ export interface ContactInquiryInput {
      * @maxLength 5000
      */
   message: string;
-  consent: true;
 }
 
 export interface ContactInquiryResult {

@@ -22,24 +22,20 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { cn } from "@/lib/utils"
+import { Link } from "wouter"
 import { useSubmitContact } from "@workspace/api-client-react"
 import { useToast } from "@/hooks/use-toast"
 import { CheckCircle2, Loader2 } from "lucide-react"
-import { ContactSidebar } from "@/components/contact-sidebar"
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
+  companyName: z.string().max(150).optional(),
   email: z.string().email("Please enter a valid email address").max(254),
   phone: z.string().max(40).optional(),
-  service: z.enum(["erp_advisory", "implementation_coordination", "system_audit", "other"], {
-    required_error: "Please select an area of interest",
+  service: z.enum(["new_implementation", "improve_existing", "select_partner", "implementation_guidance", "partnership", "other"], {
+    required_error: "Please select an enquiry type",
   }),
   message: z.string().min(10, "Message must be at least 10 characters").max(5000),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: "You must accept the terms to proceed" }),
-  }),
   website: z.string().max(200).optional(),
 })
 
@@ -55,11 +51,11 @@ export default function Contact() {
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
+      companyName: "",
       email: "",
       phone: "",
       service: undefined,
       message: "",
-      consent: undefined,
       website: "",
     },
   })
@@ -99,20 +95,14 @@ export default function Contact() {
               Request a Consultation
             </h1>
             <p className="text-lg text-muted-foreground">
-              All inquiries are strictly confidential. Please provide preliminary details below so we may prepare for our initial discussion.
+              Tell us what you’re planning or where your current system is falling short. We’ll review your enquiry and get in touch to discuss how we can help.
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 max-w-6xl mx-auto">
-          {/* Contact Info Sidebar */}
+        <div className="max-w-3xl mx-auto">
           <ScrollReveal delay={0.1}>
-            <ContactSidebar />
-          </ScrollReveal>
-
-          {/* Form */}
-          <ScrollReveal delay={0.2}>
-            <div className="bg-card p-8 md:p-10 rounded-2xl border border-border h-full">
+            <div className="bg-card p-8 md:p-10 rounded-2xl border border-border">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="absolute -left-[10000px]" aria-hidden="true">
@@ -125,7 +115,7 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Full Name / Company <span className="text-destructive">*</span></FormLabel>
+                          <FormLabel>Full Name <span className="text-destructive">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="Jane Doe" {...field} className="bg-background" />
                           </FormControl>
@@ -133,6 +123,22 @@ export default function Contact() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="companyName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Company Name <span className="text-muted-foreground font-normal">(Optional)</span></FormLabel>
+                          <FormControl>
+                            <Input placeholder="Acme Inc." {...field} className="bg-background" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
                       name="email"
@@ -146,9 +152,6 @@ export default function Contact() {
                         </FormItem>
                       )}
                     />
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
                       name="phone"
@@ -156,31 +159,8 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Phone Number <span className="text-muted-foreground font-normal">(Optional)</span></FormLabel>
                           <FormControl>
-                            <Input placeholder="+1 (555) 000-0000" type="tel" {...field} className="bg-background" />
+                            <Input placeholder="Include country code" type="tel" {...field} className="bg-background" />
                           </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="service"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Area of Interest <span className="text-destructive">*</span></FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger className="bg-background">
-                                <SelectValue placeholder="Select a practice area" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="erp_advisory">ERP Advisory & Strategy</SelectItem>
-                              <SelectItem value="implementation_coordination">Implementation Coordination</SelectItem>
-                              <SelectItem value="system_audit">System Audit & Rescue</SelectItem>
-                              <SelectItem value="other">General Inquiry</SelectItem>
-                            </SelectContent>
-                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -189,17 +169,25 @@ export default function Contact() {
 
                   <FormField
                     control={form.control}
-                    name="message"
+                    name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Brief Description of your Needs <span className="text-destructive">*</span></FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Please briefly describe your current systems and operational objectives..." 
-                            className="min-h-[150px] resize-y bg-background" 
-                            {...field} 
-                          />
-                        </FormControl>
+                        <FormLabel>How can we help? <span className="text-destructive">*</span></FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-background">
+                              <SelectValue placeholder="Select an enquiry type" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="new_implementation">New ERP / Odoo implementation</SelectItem>
+                            <SelectItem value="improve_existing">Improve an existing system</SelectItem>
+                            <SelectItem value="select_partner">Select an implementation partner</SelectItem>
+                            <SelectItem value="implementation_guidance">Implementation guidance</SelectItem>
+                            <SelectItem value="partnership">Partnership opportunity</SelectItem>
+                            <SelectItem value="other">Other / Not sure yet</SelectItem>
+                          </SelectContent>
+                        </Select>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -207,40 +195,45 @@ export default function Contact() {
 
                   <FormField
                     control={form.control}
-                    name="consent"
+                    name="message"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-border p-4 bg-background">
+                      <FormItem>
+                        <FormLabel>Tell us about your project <span className="text-destructive">*</span></FormLabel>
                         <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
+                          <Textarea
+                            placeholder="What would you like help with? You can mention your current system, main challenges, and preferred timeline."
+                            className="min-h-[150px] resize-y bg-background"
+                            {...field}
                           />
                         </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel className="text-sm font-normal text-muted-foreground">
-                            I understand that this inquiry does not constitute formal advisory advice, and does not form a professional-client relationship until an engagement letter is signed.
-                          </FormLabel>
-                          <FormMessage />
-                        </div>
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full md:w-auto min-w-[200px]"
-                    disabled={submitContact.isPending}
-                  >
-                    {submitContact.isPending ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Submitting...
-                      </>
-                    ) : (
-                      "Submit Inquiry"
-                    )}
-                  </Button>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full sm:w-auto min-w-[200px]"
+                      disabled={submitContact.isPending}
+                    >
+                      {submitContact.isPending ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Submitting...
+                        </>
+                      ) : (
+                        "Send Enquiry"
+                      )}
+                    </Button>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      We’ll use the information you provide to respond to your enquiry. See our{" "}
+                      <Link href="/privacy" className="underline hover:text-primary transition-colors">Privacy Policy</Link> for details.
+                      <br />
+                      Please do not include passwords or sensitive business information.
+                    </p>
+                  </div>
 
                   {justSubmitted && (
                     <div
