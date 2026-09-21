@@ -245,14 +245,14 @@ export default function Contact() {
                   {justSubmitted && (
                     <div
                       key={submissionId}
-                      className="w-full md:w-auto md:min-w-[280px] overflow-hidden rounded-lg border border-secondary/30 bg-secondary/10 animate-in fade-in slide-in-from-top-1 duration-300"
+                      className="w-full md:w-auto md:min-w-[280px] overflow-hidden rounded-lg border border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950 animate-in fade-in slide-in-from-top-1 duration-300"
                     >
                       <div className="flex items-center gap-2 px-4 py-3">
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-secondary" />
-                        <span className="text-sm font-medium text-foreground">Message sent successfully</span>
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" />
+                        <span className="text-sm font-medium text-green-900 dark:text-green-100">Message sent successfully</span>
                       </div>
-                      <div className="h-1 bg-secondary/20">
-                        <div className="h-full bg-secondary animate-[contact-success-bar_5s_linear_forwards]" />
+                      <div className="h-1 bg-green-200 dark:bg-green-800">
+                        <div className="h-full bg-green-500 animate-[contact-success-bar_5s_linear_forwards]" />
                       </div>
                     </div>
                   )}
