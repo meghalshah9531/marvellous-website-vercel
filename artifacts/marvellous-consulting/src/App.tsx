@@ -1,4 +1,5 @@
 import { type ReactNode, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -64,6 +65,7 @@ function App() {
           <Router />
         </WouterRouter>
         <Toaster />
+        <Analytics />
       </QueryClientProvider>
     </ThemeProvider>
   );
