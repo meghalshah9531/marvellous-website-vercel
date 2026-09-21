@@ -10,8 +10,8 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 mb-3">
-              <img src="/images/logo-mark.png" alt="" className="h-10 w-10 object-contain" />
+            <Link href="/" className="flex items-stretch gap-2 mb-3">
+              <img src="/images/logo-mark.png" alt="" className="h-full w-auto object-contain" />
               <span className="flex flex-col items-center leading-none">
                 <span className="font-serif font-bold text-lg text-primary leading-none">Marvellous</span>
                 <span className="text-[10px] font-semibold tracking-[0.2em] text-primary leading-none mt-1">CONSULTING</span>
