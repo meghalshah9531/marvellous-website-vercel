@@ -196,7 +196,7 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Tell us about your project <span className="text-destructive">*</span></FormLabel>
+                        <FormLabel>Tell us about your Project <span className="text-destructive">*</span></FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="What would you like help with? You can mention your current system, main challenges, and preferred timeline."
@@ -240,7 +240,7 @@ export default function Contact() {
                     >
                       <div className="flex items-center gap-2 px-4 py-3">
                         <CheckCircle2 className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" />
-                        <span className="text-sm font-medium text-green-900 dark:text-green-100">Message sent successfully</span>
+                        <span className="text-sm font-medium text-green-900 dark:text-green-100">Enquiry Submitted! We will get in touch shortly!</span>
                       </div>
                       <div className="h-1 bg-green-200 dark:bg-green-800">
                         <div className="h-full bg-green-500 animate-[contact-success-bar_5s_linear_forwards]" />
