@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <img src="/images/logo-mark.png" alt="" className="size-8 object-contain" />
+              <img src="/images/logo-mark.png" alt="" className="size-12 object-contain" />
               <span className="font-serif font-semibold text-lg">
                 Marvellous Consulting
               </span>
