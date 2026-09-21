@@ -14,7 +14,7 @@ export const siteConfig = {
   calendarUrl: "{{CALENDAR_URL}}",
   yearsExperience: "9+ Years of Personal Experience",
   social: {
-    linkedin: "https://www.linkedin.com/", // {{PLACEHOLDER}}
+    linkedin: "https://www.linkedin.com/company/marvellous-consulting", // {{PLACEHOLDER}}
   },
   partners: {
     erp: {
