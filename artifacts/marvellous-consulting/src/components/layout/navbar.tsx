@@ -70,10 +70,8 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <img src="/images/logo-mark.png" alt="" className="size-11 object-contain transition-transform group-hover:scale-105" />
-            <span className="font-serif font-semibold text-lg hidden sm:inline-block">
-              {siteConfig.name}
-            </span>
+            <img src="/images/logo-mark.png" alt={siteConfig.name} className="size-11 object-contain transition-transform group-hover:scale-105 sm:hidden" />
+            <img src="/images/logo-full.png" alt={siteConfig.name} className="hidden sm:block h-10 w-auto object-contain transition-transform group-hover:scale-105" />
           </Link>
 
           {/* Desktop Nav */}
