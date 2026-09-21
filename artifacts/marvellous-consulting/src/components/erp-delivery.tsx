@@ -11,14 +11,14 @@ export function ErpDelivery() {
             <ScrollReveal>
               <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">ERP Delivery</p>
               <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight mb-6">
-                Execution without architecture is risk.
+                A clear scope. A coordinated implementation.
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Start by understanding your workflows, priorities, and the problems the ERP needs to solve. Those findings help shape the scope and the delivery plan.
+                  We turn agreed business requirements into a practical delivery brief covering workflows, configuration, integrations, and data migration.
                 </p>
                 <p>
-                  We help define requirements and coordinate with the implementation team as they configure and deliver the solution. Together, we review decisions against your business priorities through go-live.
+                  During implementation, we help resolve open questions, review proposed changes against the agreed scope, and coordinate testing and go-live preparation with your team and implementation partner.
                 </p>
               </div>
             </ScrollReveal>
@@ -56,65 +56,63 @@ export function ErpDelivery() {
             </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Mode A */}
-            <ScrollReveal delay={0.1}>
-              <div className="bg-background p-8 md:p-10 rounded-2xl border border-border h-full flex flex-col relative overflow-hidden transition-colors hover:border-primary/50 group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 group-hover:bg-primary/10 transition-colors rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-                
-                <div className="mb-6">
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">Mode A</h3>
-                  <h4 className="text-2xl font-serif font-medium text-foreground mb-4">Specialist Delivery Partner</h4>
-                  <p className="text-muted-foreground text-base leading-relaxed">
-                    Implementation services are delivered through an agreed specialist delivery partner, carefully selected for your project based on:
-                  </p>
-                </div>
-                
-                <ul className="space-y-4 mt-auto relative z-10">
-                  {[
-                    "Industry expertise",
-                    "Capacity and timeline",
-                    "Technical capability",
-                    "Integrations and migration",
-                    "Budget alignment"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-base text-foreground">
-                  <CheckCircle2 className="size-5 text-secondary shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Implementation Through a Specialist Partner",
+                whoItSuits: "You need full end-to-end delivery and want a partner matched to your industry, project scope, and budget.",
+                ourRole: "We help select the right delivery partner based on industry expertise, capacity, technical capability, and integrations, then coordinate throughout the engagement.",
+                handles: ["System configuration", "Integrations and data migration", "Testing and go-live execution", "Post-launch support"],
+              },
+              {
+                title: "Support for Your Existing ERP Team",
+                whoItSuits: "You already have an in-house ERP team, or an external implementation partner already in place, and want independent oversight to keep the project on track.",
+                ourRole: "We clarify requirements, review proposed changes against agreed scope, and keep communication clear between your stakeholders and the existing team or partner.",
+                handles: ["System configuration", "Custom development", "Implementation execution", "Ongoing system support"],
+              },
+              {
+                title: "Implementation by Our Team",
+                note: "Available on a project basis, subject to capacity.",
+                whoItSuits: "You'd prefer a single point of contact handling both advisory and hands-on implementation.",
+                ourRole: "We take on delivery directly, applying the same scope and requirements discipline as our advisory engagements.",
+                handles: ["System configuration", "Integrations and data migration", "Testing and go-live execution", "Post-launch support"],
+              },
+            ].map((option, i) => (
+              <ScrollReveal key={option.title} delay={i * 0.1}>
+                <div className="bg-background p-8 rounded-2xl border border-border h-full flex flex-col relative overflow-hidden transition-colors hover:border-primary/50 group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 group-hover:bg-primary/10 transition-colors rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-            {/* Mode B */}
-            <ScrollReveal delay={0.2}>
-              <div className="bg-background p-8 md:p-10 rounded-2xl border border-border h-full flex flex-col relative overflow-hidden transition-colors hover:border-secondary/50 group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 group-hover:bg-secondary/10 transition-colors rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-                
-                <div className="mb-6">
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-secondary mb-3">Mode B</h3>
-                  <h4 className="text-2xl font-serif font-medium text-foreground mb-4">Internal Team</h4>
-                  <p className="text-muted-foreground text-base leading-relaxed">
-                    If your business already has an in-house ERP team, we can help coordinate requirements and priorities for work such as:
-                  </p>
+                  <div className="relative z-10">
+                    <h4 className="text-xl font-serif font-medium text-foreground mb-2">{option.title}</h4>
+                    {option.note && (
+                      <p className="text-xs font-semibold uppercase tracking-wide text-secondary mb-4">{option.note}</p>
+                    )}
+
+                    <div className="mt-6 space-y-5">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-1.5">Who it suits</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{option.whoItSuits}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-1.5">Our role</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{option.ourRole}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">What the delivery team handles</p>
+                        <ul className="space-y-2.5">
+                          {option.handles.map((item) => (
+                            <li key={item} className="flex items-start gap-2.5 text-sm text-foreground">
+                              <CheckCircle2 className="size-4 text-secondary shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <ul className="space-y-4 mt-auto relative z-10">
-                  {[
-                    "System configuration",
-                    "Custom development",
-                    "Implementation execution",
-                    "Ongoing system support"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-base text-foreground">
-                      <CheckCircle2 className="size-5 text-secondary shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
