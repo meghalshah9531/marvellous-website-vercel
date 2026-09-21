@@ -180,11 +180,9 @@ export default function Contact() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="new_implementation">New ERP / Odoo implementation</SelectItem>
-                            <SelectItem value="improve_existing">Improve an existing system</SelectItem>
-                            <SelectItem value="select_partner">Select an implementation partner</SelectItem>
-                            <SelectItem value="implementation_guidance">Implementation guidance</SelectItem>
-                            <SelectItem value="partnership">Partnership opportunity</SelectItem>
+                            <SelectItem value="guidance">Free Consultation / Guidance</SelectItem>
+                            <SelectItem value="new_implementation">New Odoo implementation</SelectItem>
+                            <SelectItem value="improve_existing">Existing Odoo implementation</SelectItem>
                             <SelectItem value="other">Other / Not sure yet</SelectItem>
                           </SelectContent>
                         </Select>
