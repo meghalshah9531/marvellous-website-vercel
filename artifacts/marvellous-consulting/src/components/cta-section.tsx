@@ -22,15 +22,15 @@ export function CtaSection({
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-background/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <ScrollReveal className="max-w-3xl space-y-6">
+        <ScrollReveal className="max-w-3xl mx-auto text-center space-y-6">
           <p className="text-sm font-bold uppercase tracking-widest text-secondary">Consult us</p>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold leading-tight">
             {title}
           </h2>
-          <p className="text-primary-foreground/85 dark:text-primary/85 text-lg md:text-xl max-w-2xl">
+          <p className="text-primary-foreground/85 dark:text-primary/85 text-lg md:text-xl max-w-2xl mx-auto">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto h-12 px-8 text-base">
               <Link href={primaryButtonHref}>{primaryButtonText}</Link>
             </Button>
