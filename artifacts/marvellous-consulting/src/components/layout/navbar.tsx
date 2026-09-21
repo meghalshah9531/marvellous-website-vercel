@@ -70,9 +70,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="size-8 rounded-sm bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg transition-transform group-hover:scale-105">
-              M
-            </div>
+            <img src="/images/logo-mark.png" alt="" className="size-8 object-contain transition-transform group-hover:scale-105" />
             <span className="font-serif font-semibold text-lg hidden sm:inline-block">
               {siteConfig.name}
             </span>
