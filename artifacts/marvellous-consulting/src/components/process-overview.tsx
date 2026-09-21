@@ -19,7 +19,7 @@ export function ProcessOverview() {
     },
     {
       icon: <Users className="size-6 text-primary" />,
-      title: "Select the Right Delivery Team",
+      title: "Select Your Delivery Team",
       description: "We help select implementation expertise suited to your industry, project scope, budget, and working style."
     },
     {
@@ -32,6 +32,7 @@ export function ProcessOverview() {
   return (
     <section id="how-we-work" className="scroll-mt-24 py-20 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
         <div className="max-w-3xl mb-10 space-y-4">
           <p className="text-sm font-bold uppercase tracking-widest text-secondary">How We Work</p>
           <h2 className="text-4xl md:text-5xl font-serif font-semibold text-primary leading-tight">
@@ -39,7 +40,7 @@ export function ProcessOverview() {
           </h2>
         </div>
 
-        <div ref={sequenceRef} className="relative max-w-6xl mx-auto">
+        <div ref={sequenceRef} className="relative">
           <div aria-hidden="true" className="absolute left-8 top-8 bottom-8 w-px bg-border lg:hidden" />
           <div aria-hidden="true" className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-border" />
           {!reduceMotion && (
@@ -56,12 +57,13 @@ export function ProcessOverview() {
                 </div>
                 <div className="pb-2 lg:text-center">
                   <span className="text-xs font-bold tracking-widest text-secondary">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="text-xl font-serif font-semibold text-foreground mt-1 mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
+                  <h3 className="text-xl font-serif font-semibold text-foreground mt-1 mb-3 lg:min-h-14">{step.title}</h3>
+                  <p className="text-foreground/70 leading-relaxed text-sm">{step.description}</p>
                 </div>
               </motion.li>
             ))}
           </motion.ol>
+        </div>
         </div>
       </div>
     </section>

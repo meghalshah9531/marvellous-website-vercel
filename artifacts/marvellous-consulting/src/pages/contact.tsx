@@ -125,7 +125,7 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Full Name / Company</FormLabel>
+                          <FormLabel>Full Name / Company <span className="text-destructive">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="Jane Doe" {...field} className="bg-background" />
                           </FormControl>
@@ -138,7 +138,7 @@ export default function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email Address</FormLabel>
+                          <FormLabel>Email Address <span className="text-destructive">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="jane@example.com" type="email" {...field} className="bg-background" />
                           </FormControl>
@@ -167,7 +167,7 @@ export default function Contact() {
                       name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Area of Interest</FormLabel>
+                          <FormLabel>Area of Interest <span className="text-destructive">*</span></FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger className="bg-background">
@@ -192,7 +192,7 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Brief Description of Needs</FormLabel>
+                        <FormLabel>Brief Description of your Needs <span className="text-destructive">*</span></FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder="Please briefly describe your current systems and operational objectives..." 
