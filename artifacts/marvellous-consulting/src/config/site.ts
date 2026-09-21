@@ -14,7 +14,7 @@ export const siteConfig = {
   calendarUrl: "{{CALENDAR_URL}}",
   yearsExperience: "9+ Years of Personal Experience",
   social: {
-    linkedin: "https://www.linkedin.com/in/krimishah/", // {{PLACEHOLDER}}
+    linkedin: "https://www.linkedin.com/", // {{PLACEHOLDER}}
   },
   partners: {
     erp: {
