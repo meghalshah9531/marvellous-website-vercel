@@ -3,7 +3,7 @@ export const siteConfig = {
   description: "ERP advisory, solution design, and implementation coordination firm.",
   url: "https://marvellous-consulting.com", // {{PLACEHOLDER}}
   email: "info@marvellous-consulting.com",
-  phone: "{{BUSINESS_PHONE}}",
+  phone: "+49 155 6590 4343",
   address: {
     street: "{{BUSINESS_ADDRESS_STREET}}",
     city: "{{BUSINESS_ADDRESS_CITY}}",
