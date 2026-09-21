@@ -49,6 +49,7 @@ export default function Contact() {
   const { toast } = useToast()
   const submitContact = useSubmitContact()
   const [justSubmitted, setJustSubmitted] = useState(false)
+  const [submissionId, setSubmissionId] = useState(0)
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -70,7 +71,8 @@ export default function Contact() {
         onSuccess: () => {
           form.reset()
           setJustSubmitted(true)
-          setTimeout(() => setJustSubmitted(false), 4000)
+          setSubmissionId((id) => id + 1)
+          setTimeout(() => setJustSubmitted(false), 5000)
         },
         onError: () => {
           toast({
@@ -227,18 +229,10 @@ export default function Contact() {
                   <Button
                     type="submit"
                     size="lg"
-                    className={cn(
-                      "w-full md:w-auto min-w-[200px] transition-colors",
-                      justSubmitted && "bg-primary hover:bg-primary text-primary-foreground"
-                    )}
-                    disabled={submitContact.isPending || justSubmitted}
+                    className="w-full md:w-auto min-w-[200px]"
+                    disabled={submitContact.isPending}
                   >
-                    {justSubmitted ? (
-                      <>
-                        <CheckCircle2 className="mr-2 h-4 w-4" />
-                        Message Sent
-                      </>
-                    ) : submitContact.isPending ? (
+                    {submitContact.isPending ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Submitting...
@@ -247,6 +241,21 @@ export default function Contact() {
                       "Submit Inquiry"
                     )}
                   </Button>
+
+                  {justSubmitted && (
+                    <div
+                      key={submissionId}
+                      className="w-full md:w-auto md:min-w-[280px] overflow-hidden rounded-lg border border-secondary/30 bg-secondary/10 animate-in fade-in slide-in-from-top-1 duration-300"
+                    >
+                      <div className="flex items-center gap-2 px-4 py-3">
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-secondary" />
+                        <span className="text-sm font-medium text-foreground">Message sent successfully</span>
+                      </div>
+                      <div className="h-1 bg-secondary/20">
+                        <div className="h-full bg-secondary animate-[contact-success-bar_5s_linear_forwards]" />
+                      </div>
+                    </div>
+                  )}
                 </form>
               </Form>
             </div>
