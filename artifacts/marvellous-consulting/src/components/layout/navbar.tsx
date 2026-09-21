@@ -116,7 +116,7 @@ export function Navbar() {
                 <Moon aria-hidden="true" className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
               <Button asChild variant="secondary" className={cn("font-medium", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary ring-offset-2 ring-offset-background")}>
-                <a href="/#contact-us" aria-current={location === "/" && activeSection === "contact-us" ? "location" : undefined}>Consult us</a>
+                <Link href="/contact">Consult Us</Link>
               </Button>
             </div>
           </nav>
@@ -164,7 +164,7 @@ export function Navbar() {
             ))}
             <div className="pt-4 border-t border-border">
               <Button asChild variant="secondary" className={cn("w-full justify-center", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary")}>
-                <a href="/#contact-us" aria-current={location === "/" && activeSection === "contact-us" ? "location" : undefined} onClick={() => setIsMobileMenuOpen(false)}>Consult us</a>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Consult Us</Link>
               </Button>
             </div>
           </nav>
