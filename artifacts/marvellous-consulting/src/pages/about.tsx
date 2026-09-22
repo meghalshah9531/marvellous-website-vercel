@@ -18,7 +18,7 @@ export default function About() {
         {/* Opening */}
         <section className="py-20 lg:py-28 bg-background">
           <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
-            <div className="max-w-2xl">
+            <div className="max-w-[65ch]">
               <ScrollReveal>
                 <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">About Marvellous</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight text-primary mb-8">
@@ -42,7 +42,7 @@ export default function About() {
         {/* The Idea */}
         <section className="py-24 lg:py-32 bg-card">
           <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
-            <div className="max-w-2xl">
+            <div className="max-w-[65ch]">
               <ScrollReveal>
                 <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">The Idea</p>
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary leading-tight mb-8">
@@ -66,7 +66,7 @@ export default function About() {
         {/* The Approach */}
         <section className="py-24 lg:py-32 bg-primary/5">
           <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
-            <div className="max-w-2xl">
+            <div className="max-w-[65ch]">
               <ScrollReveal>
                 <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">The Approach</p>
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary leading-tight mb-8">
@@ -94,7 +94,7 @@ export default function About() {
         <div aria-hidden="true" className="absolute bottom-0 left-0 w-80 h-80 bg-background/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
         <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
-          <ScrollReveal className="max-w-2xl mx-auto text-center space-y-6">
+          <ScrollReveal className="max-w-[65ch] mx-auto text-center space-y-6">
             <p className="text-sm font-bold uppercase tracking-widest text-secondary">The Belief</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold leading-tight">
               The right fit makes the difference.
