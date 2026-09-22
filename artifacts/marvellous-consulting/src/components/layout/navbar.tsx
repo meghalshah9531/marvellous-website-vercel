@@ -4,12 +4,10 @@ import { Menu, X, Sun, Moon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
-import { siteConfig } from "@/config/site"
 
 const navLinks = [
-  { href: "/#home", label: "Home", section: "home" },
   { href: "/#how-we-work", label: "How We Work", section: "how-we-work" },
-  { href: "/#erp-delivery", label: "ERP Delivery", section: "erp-delivery" },
+  { href: "/#erp-delivery", label: "ERP Consulting", section: "erp-delivery" },
   { href: "/about", label: "About Us" },
 ]
 
@@ -69,7 +67,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" aria-label="Marvellous Consulting homepage" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 group">
             <img src="/images/logo-mark.png" alt="" className="h-10 w-10 object-contain transition-transform group-hover:scale-105" />
             <span className="hidden sm:flex flex-col items-center leading-none">
               <span className="font-serif font-bold text-lg text-primary leading-none">Marvellous</span>
@@ -114,8 +112,8 @@ export function Navbar() {
                 <Sun aria-hidden="true" className="size-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon aria-hidden="true" className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
-              <Button asChild variant="secondary" className={cn("font-medium", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary ring-offset-2 ring-offset-background")}>
-                <Link href="/contact">Consult Us</Link>
+              <Button asChild variant="secondary" className={cn("font-medium", location === "/contact" && "ring-2 ring-primary ring-offset-2 ring-offset-background")}>
+                <Link href="/contact">Discuss Your Project</Link>
               </Button>
             </div>
           </nav>
@@ -162,8 +160,8 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-4 border-t border-border">
-              <Button asChild variant="secondary" className={cn("w-full justify-center", location === "/" && activeSection === "contact-us" && "ring-2 ring-primary")}>
-                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Consult Us</Link>
+              <Button asChild variant="secondary" className={cn("w-full justify-center", location === "/contact" && "ring-2 ring-primary")}>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Discuss Your Project</Link>
               </Button>
             </div>
           </nav>
