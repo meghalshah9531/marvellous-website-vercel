@@ -1,5 +1,6 @@
 import { Link } from "wouter"
 import { siteConfig } from "@/config/site"
+import { Phone, Mail, Linkedin } from "lucide-react"
 
 const navigationLinks = [
   { href: "/", label: "Home" },
@@ -45,17 +46,20 @@ export function Footer() {
 
           <address className="min-w-0 not-italic text-sm text-muted-foreground md:justify-self-end">
             <ul className="space-y-3">
-              <li>
-                <a href={`mailto:${siteConfig.email}`} className="break-words hover:text-primary transition-colors">
-                  {siteConfig.email}
-                </a>
-              </li>
-              <li>
+              <li className="flex items-center gap-3">
+                <Phone className="size-4 shrink-0 text-primary" aria-hidden="true" />
                 <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, '')}`} className="hover:text-primary transition-colors">
                   {siteConfig.phone}
                 </a>
               </li>
-              <li>
+              <li className="flex items-center gap-3">
+                <Mail className="size-4 shrink-0 text-primary" aria-hidden="true" />
+                <a href={`mailto:${siteConfig.email}`} className="break-words hover:text-primary transition-colors">
+                  {siteConfig.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Linkedin className="size-4 shrink-0 text-primary" aria-hidden="true" />
                 <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Marvellous Consulting on LinkedIn">
                   LinkedIn
                 </a>
