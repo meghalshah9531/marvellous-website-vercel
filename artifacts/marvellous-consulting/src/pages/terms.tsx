@@ -3,10 +3,10 @@ import { SEO } from "@/components/seo"
 export default function TermsOfService() {
   return (
     <div className="pt-32 pb-24 min-h-screen bg-background">
-      <SEO title="Terms of Service" description="Terms of service for Marvellous Consulting." />
+      <SEO title="Website Terms" description="Website terms for Marvellous Consulting." />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-3xl prose prose-neutral dark:prose-invert prose-headings:font-serif">
-        <h1 className="text-4xl font-medium mb-8">Terms of Service</h1>
+        <h1 className="text-4xl font-medium mb-8">Website Terms</h1>
         <p className="text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
         
         <p>

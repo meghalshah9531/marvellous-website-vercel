@@ -11,6 +11,7 @@ import { Footer } from '@/components/layout/footer';
 import Home from '@/pages/home';
 import About from '@/pages/about';
 import Contact from '@/pages/contact';
+import LegalNotice from '@/pages/legal-notice';
 import PrivacyPolicy from '@/pages/privacy';
 import TermsOfService from '@/pages/terms';
 import NotFound from '@/pages/not-found';
@@ -44,6 +45,7 @@ function Router() {
             <Route path="/how-we-work">{() => <LegacySectionRedirect section="how-we-work" />}</Route>
             <Route path="/for-partners">{() => <LegacySectionRedirect section="erp-delivery" />}</Route>
             <Route path="/contact" component={Contact} />
+            <Route path="/legal-notice" component={LegalNotice} />
             <Route path="/privacy" component={PrivacyPolicy} />
             <Route path="/terms" component={TermsOfService} />
             <Route component={NotFound} />
