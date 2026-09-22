@@ -1,155 +1,119 @@
 import { SEO } from "@/components/seo"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { CtaSection } from "@/components/cta-section"
-import { Building, Award, Target, Briefcase } from "lucide-react"
-import { siteConfig } from "@/config/site"
+import { ConvergingLines } from "@/components/converging-lines"
+import { Button } from "@/components/ui/button"
+import { Link } from "wouter"
 
 export default function About() {
   return (
     <div className="pt-24 min-h-screen">
-      <SEO 
-        title="About Us" 
-        description="Marvellous Consulting helps businesses plan ERP solutions and coordinate implementation."
+      <SEO
+        title="About Us"
+        description="Marvellous Consulting connects business requirements with the right ERP solution and the people who can deliver it."
       />
-      
-      {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-background border-b border-border relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/erp-delivery-workshop.jpg" 
-            alt="Consulting Workshop" 
-            className="w-full h-full object-cover opacity-[0.05] dark:opacity-[0.15] mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent" />
-        </div>
-        
+
+      <div className="relative">
+        <ConvergingLines />
+
+        {/* Opening */}
+        <section className="py-20 lg:py-28 bg-background">
+          <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
+            <div className="max-w-2xl">
+              <ScrollReveal>
+                <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">About Marvellous</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight text-primary mb-8">
+                  Good ERP decisions start with understanding.
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    An ERP project often begins with a software search. But the questions behind it are about the business: What needs to improve? Which processes are holding people back? And who can help turn those needs into a working solution?
+                  </p>
+                  <p>
+                    Marvellous Consulting grew from experience with these conversations—and the belief that understanding the business should come first.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* The Idea */}
+        <section className="py-24 lg:py-32 bg-card">
+          <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
+            <div className="max-w-2xl">
+              <ScrollReveal>
+                <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">The Idea</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary leading-tight mb-8">
+                  Bring the right pieces together.
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    Choosing an ERP is one decision. Choosing the people who understand your industry and can implement it is another. Both deserve careful thought.
+                  </p>
+                  <p>
+                    We bring these decisions together, connecting business requirements with practical ERP guidance and suitable implementation expertise.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* The Approach */}
+        <section className="py-24 lg:py-32 bg-primary/5">
+          <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
+            <div className="max-w-2xl">
+              <ScrollReveal>
+                <p className="text-sm font-bold uppercase tracking-widest text-secondary mb-4">The Approach</p>
+                <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary leading-tight mb-8">
+                  Listen carefully. Make things clear.
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    We ask questions, make sense of complex requirements, and help you understand your options. With a focus on Odoo, we support the decisions that move your project forward.
+                  </p>
+                  <p>
+                    Sometimes that means finding an implementation partner. Sometimes it means bringing clarity to a project already underway.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* The Belief */}
+      <section className="py-24 lg:py-32 bg-primary dark:bg-card text-primary-foreground dark:text-primary relative overflow-hidden">
+        <div aria-hidden="true" className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+        <div aria-hidden="true" className="absolute bottom-0 left-0 w-80 h-80 bg-background/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+
         <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <ScrollReveal>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-tight text-foreground">
-                Grounded expertise. <br className="hidden md:block" />
-                <span className="text-muted-foreground">Strategic execution.</span>
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                We built Marvellous Consulting on a simple premise: technical knowledge is only valuable when applied with precision and clarity. We coordinate complex deliveries without dealing in ambiguity.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Values */}
-      <section className="py-24 bg-card border-b border-border">
-        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-serif font-medium text-center mb-16 text-foreground">
-              Core Principles
+          <ScrollReveal className="max-w-2xl mx-auto text-center space-y-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-secondary">The Belief</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold leading-tight">
+              The right fit makes the difference.
             </h2>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <ScrollReveal delay={0.1}>
-              <div className="text-center space-y-4">
-                <div className="mx-auto w-16 h-16 bg-background rounded-2xl flex items-center justify-center border border-border shadow-sm mb-6">
-                  <Target className="size-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-serif font-medium text-foreground">Radical Clarity</h3>
-                <p className="text-muted-foreground">
-                  Complex database schemas and operational workflows require translation. We communicate plainly, ensuring business stakeholders understand exactly where the project stands.
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={0.2}>
-              <div className="text-center space-y-4">
-                <div className="mx-auto w-16 h-16 bg-background rounded-2xl flex items-center justify-center border border-border shadow-sm mb-6">
-                  <Award className="size-8 text-secondary" />
-                </div>
-                <h3 className="text-xl font-serif font-medium text-foreground">Business-First Advice</h3>
-                <p className="text-muted-foreground">
-                  We start with your business requirements and explain the reasoning behind solution and partner recommendations. We clarify roles and commercial arrangements as part of the planning process.
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={0.3}>
-              <div className="text-center space-y-4">
-                <div className="mx-auto w-16 h-16 bg-background rounded-2xl flex items-center justify-center border border-border shadow-sm mb-6">
-                  <Briefcase className="size-8 text-foreground" />
-                </div>
-                <h3 className="text-xl font-serif font-medium text-foreground">Boutique Attention</h3>
-                <p className="text-muted-foreground">
-                  You work directly with the partners. We limit our active engagements to ensure every client receives the rigorous, senior-level coordination their business transformation demands.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-24 max-w-5xl">
-          <ScrollReveal>
-            <div className="mb-12 text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-4">
-                Leadership
-              </h2>
-              <div className="h-1 w-20 bg-primary/20 rounded-full mx-auto md:mx-0" />
+            <p className="text-primary-foreground/85 dark:text-primary/85 text-lg leading-relaxed">
+              Your processes, people, and priorities shape what "right" means for your business. That is where our work begins.
+            </p>
+            <p className="font-serif text-xl md:text-2xl leading-snug pt-2">
+              The right ERP solution.<br />
+              The right implementation partner.
+            </p>
+            <div className="pt-4">
+              <Button asChild size="lg" variant="secondary" className="h-12 px-8 text-base">
+                <Link href="/contact">Let's Discuss Your Project</Link>
+              </Button>
             </div>
           </ScrollReveal>
-
-          <div className="space-y-20">
-            {/* ERP Advisory Partner */}
-            <ScrollReveal delay={0.1}>
-              <div className="grid md:grid-cols-[1fr_2fr] gap-8 lg:gap-12 items-start">
-                <div className="aspect-square bg-card rounded-2xl border border-border flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors" />
-                  <Building className="size-24 text-primary/30" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border text-center">
-                    <p className="font-medium text-sm text-foreground">Placeholder Profile</p>
-                    <p className="text-xs text-muted-foreground">Update in siteConfig</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground">{siteConfig.partners.erp.name}</h3>
-                  <p className="text-primary font-medium tracking-wide uppercase text-sm">{siteConfig.partners.erp.credentials}</p>
-                  <p className="text-muted-foreground font-medium pb-2 border-b border-border inline-block">{siteConfig.partners.erp.title}</p>
-                  <div className="text-muted-foreground leading-relaxed pt-2">
-                    <p>{siteConfig.partners.erp.bio}</p>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Delivery Partner */}
-            <ScrollReveal delay={0.2}>
-              <div className="grid md:grid-cols-[1fr_2fr] gap-8 lg:gap-12 items-start">
-                <div className="aspect-square bg-card rounded-2xl border border-border flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors" />
-                  <Building className="size-24 text-secondary/30" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border text-center">
-                    <p className="font-medium text-sm text-foreground">Placeholder Profile</p>
-                    <p className="text-xs text-muted-foreground">Update in siteConfig</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl md:text-3xl font-serif font-medium text-foreground">{siteConfig.partners.delivery.name}</h3>
-                  <p className="text-secondary font-medium tracking-wide uppercase text-sm">{siteConfig.partners.delivery.credentials}</p>
-                  <p className="text-muted-foreground font-medium pb-2 border-b border-border inline-block">{siteConfig.partners.delivery.title}</p>
-                  <div className="text-muted-foreground leading-relaxed pt-2">
-                    <p>{siteConfig.partners.delivery.bio}</p>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
-
-      <CtaSection />
     </div>
   )
 }
