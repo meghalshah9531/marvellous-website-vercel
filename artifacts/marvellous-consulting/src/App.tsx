@@ -25,6 +25,13 @@ import {
 const queryClient = new QueryClient();
 
 function Router() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    if (window.location.hash) return;
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="min-h-screen flex flex-col w-full">
       <Navbar />
