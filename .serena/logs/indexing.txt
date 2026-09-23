@@ -1,0 +1,122 @@
+lib/api-client-react/node_modules/@tanstack/react-query
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/lib/api-client-react/node_modules/@tanstack/react-query'
+artifacts/marvellous-consulting/node_modules/tw-animate-css
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/tw-animate-css'
+artifacts/marvellous-consulting/node_modules/react-resizable-panels
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react-resizable-panels'
+artifacts/marvellous-consulting/node_modules/zod
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/zod'
+artifacts/marvellous-consulting/node_modules/react
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react'
+artifacts/marvellous-consulting/node_modules/tailwindcss
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/tailwindcss'
+artifacts/marvellous-consulting/node_modules/react-dom
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react-dom'
+artifacts/marvellous-consulting/node_modules/vite
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/vite'
+artifacts/marvellous-consulting/node_modules/react-day-picker
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react-day-picker'
+artifacts/marvellous-consulting/node_modules/tailwind-merge
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/tailwind-merge'
+artifacts/marvellous-consulting/node_modules/input-otp
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/input-otp'
+artifacts/marvellous-consulting/node_modules/wouter
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/wouter'
+artifacts/marvellous-consulting/node_modules/next-themes
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/next-themes'
+artifacts/marvellous-consulting/node_modules/react-hook-form
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react-hook-form'
+artifacts/marvellous-consulting/node_modules/recharts
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/recharts'
+artifacts/marvellous-consulting/node_modules/date-fns
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/date-fns'
+artifacts/marvellous-consulting/node_modules/framer-motion
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/framer-motion'
+artifacts/marvellous-consulting/node_modules/react-icons
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/react-icons'
+artifacts/marvellous-consulting/node_modules/class-variance-authority
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/class-variance-authority'
+artifacts/marvellous-consulting/node_modules/lucide-react
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/lucide-react'
+artifacts/marvellous-consulting/node_modules/clsx
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/clsx'
+artifacts/marvellous-consulting/node_modules/vaul
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/vaul'
+artifacts/marvellous-consulting/node_modules/sonner
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/sonner'
+artifacts/marvellous-consulting/node_modules/embla-carousel-react
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/embla-carousel-react'
+artifacts/marvellous-consulting/node_modules/cmdk
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/cmdk'
+artifacts/marvellous-consulting/node_modules/@vitejs/plugin-react
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@vitejs/plugin-react'
+artifacts/marvellous-consulting/node_modules/@workspace/api-client-react/node_modules/@tanstack/react-query
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@workspace/api-client-react/node_modules/@tanstack/react-query'
+artifacts/marvellous-consulting/node_modules/@hookform/resolvers
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@hookform/resolvers'
+artifacts/marvellous-consulting/node_modules/@types/react
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@types/react'
+artifacts/marvellous-consulting/node_modules/@types/node
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@types/node'
+artifacts/marvellous-consulting/node_modules/@types/react-dom
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@types/react-dom'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-dropdown-menu
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-dropdown-menu'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-avatar
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-avatar'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-navigation-menu
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-navigation-menu'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-collapsible
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-collapsible'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-checkbox
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-checkbox'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-slot
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-slot'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-toggle
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-toggle'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-scroll-area
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-scroll-area'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-context-menu
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-context-menu'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-tabs
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-tabs'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-separator
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-separator'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-switch
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-switch'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-menubar
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-menubar'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-popover
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-popover'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-radio-group
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-radio-group'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-accordion
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-accordion'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-select
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-select'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-label
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-label'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-slider
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-slider'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-toast
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-toast'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-tooltip
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-tooltip'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-alert-dialog
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-alert-dialog'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-aspect-ratio
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-aspect-ratio'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-progress
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-progress'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-hover-card
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-hover-card'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-dialog
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-dialog'
+artifacts/marvellous-consulting/node_modules/@radix-ui/react-toggle-group
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@radix-ui/react-toggle-group'
+artifacts/marvellous-consulting/node_modules/@tanstack/react-query
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@tanstack/react-query'
+artifacts/marvellous-consulting/node_modules/@tailwindcss/vite
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@tailwindcss/vite'
+artifacts/marvellous-consulting/node_modules/@tailwindcss/typography
+[Errno 2] No such file or directory: '/home/meghalshah9531/new_projects/Marvellous-Consulting-Website/artifacts/marvellous-consulting/node_modules/@tailwindcss/typography'
