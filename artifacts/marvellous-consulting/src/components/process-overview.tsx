@@ -40,20 +40,24 @@ export function ProcessOverview() {
         </div>
 
         <div ref={sequenceRef} className="relative">
-          <div aria-hidden="true" className="absolute left-8 top-8 bottom-8 w-px bg-border lg:hidden" />
           <div aria-hidden="true" className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-border" />
           {!reduceMotion && (
-            <>
-              <motion.div aria-hidden="true" className="absolute left-8 top-8 bottom-8 w-[2px] bg-secondary origin-top lg:hidden" initial={{ scaleY: 0 }} animate={{ scaleY: isInView ? 1 : 0 }} transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }} />
-              <motion.div aria-hidden="true" className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-[2px] bg-secondary origin-left" initial={{ scaleX: 0 }} animate={{ scaleX: isInView ? 1 : 0 }} transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }} />
-            </>
+            <motion.div aria-hidden="true" className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-[2px] bg-secondary origin-left" initial={{ scaleX: 0 }} animate={{ scaleX: isInView ? 1 : 0 }} transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }} />
           )}
           <motion.ol className="relative grid gap-8 lg:grid-cols-4 lg:gap-0" initial={reduceMotion ? false : "hidden"} animate={isInView || reduceMotion ? "visible" : "hidden"} variants={{ visible: { transition: { staggerChildren: 0.45, delayChildren: 0.12 } } }}>
             {steps.map((step, i) => (
-              <motion.li key={i} variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="grid grid-cols-[4rem_minmax(0,1fr)] gap-5 lg:flex lg:flex-col lg:items-center lg:gap-0 lg:px-4">
+              <motion.li key={i} variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="relative grid grid-cols-[4rem_minmax(0,1fr)] gap-5 lg:flex lg:flex-col lg:items-center lg:gap-0 lg:px-4">
                 <div className="bg-background w-16 h-16 rounded-2xl flex items-center justify-center border-2 border-border shadow-sm lg:mb-6 relative z-10">
                   {step.icon}
                 </div>
+                {i < steps.length - 1 && (
+                  <>
+                    <div aria-hidden="true" className="absolute left-8 top-16 h-[calc(100%-4rem+2rem)] w-px bg-border lg:hidden" />
+                    {!reduceMotion && (
+                      <motion.div aria-hidden="true" className="absolute left-8 top-16 h-[calc(100%-4rem+2rem)] w-[2px] bg-secondary origin-top lg:hidden" initial={{ scaleY: 0 }} animate={{ scaleY: isInView ? 1 : 0 }} transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 + i * 0.45 }} />
+                    )}
+                  </>
+                )}
                 <div className="pb-2 lg:text-center">
                   <span className="text-xs font-bold tracking-widest text-secondary">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="text-xl font-serif font-semibold text-foreground mt-1 mb-3 lg:min-h-14">{step.title}</h3>

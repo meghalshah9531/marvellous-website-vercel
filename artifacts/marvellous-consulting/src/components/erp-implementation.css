@@ -24,6 +24,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .erp-implementation .erp-module {
     animation: erp-module-settle var(--erp-cycle) cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    animation-delay: var(--module-delay);
   }
 
   .erp-implementation .erp-foundation {
@@ -45,9 +46,9 @@
 }
 
 @keyframes erp-module-settle {
-  0%, 9%, 100% { transform: translateY(var(--module-lift)); opacity: 0.65; }
-  30%, 76% { transform: translateY(0); opacity: 1; }
-  94% { transform: translateY(var(--module-lift)); opacity: 0.65; }
+  0%, 9%, 100% { transform: translate(var(--module-x), var(--module-y)); opacity: 0.65; }
+  30%, 76% { transform: translate(0, 0); opacity: 1; }
+  94% { transform: translate(var(--module-x), var(--module-y)); opacity: 0.65; }
 }
 
 @keyframes erp-foundation-slide {

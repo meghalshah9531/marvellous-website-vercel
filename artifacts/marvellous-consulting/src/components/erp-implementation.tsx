@@ -22,11 +22,12 @@ function Block({ x, y, size, height, depth, tone, topFill }: { x: number; y: num
   )
 }
 
+// Each module assembles from its own side of the diamond layout: top, right, left, bottom.
 const modules = [
-  { label: "Sales", icon: ChartNoAxesCombined, x: 12, y: 12 },
-  { label: "Finance", icon: Wallet, x: 106, y: 12 },
-  { label: "Inventory", icon: Boxes, x: 12, y: 106 },
-  { label: "Operations", icon: Settings2, x: 106, y: 106 },
+  { label: "Sales", icon: ChartNoAxesCombined, x: 12, y: 12, fromX: 0, fromY: -80 },
+  { label: "Finance", icon: Wallet, x: 106, y: 12, fromX: 80, fromY: 0 },
+  { label: "Inventory", icon: Boxes, x: 12, y: 106, fromX: -80, fromY: 0 },
+  { label: "Operations", icon: Settings2, x: 106, y: 106, fromX: 0, fromY: 80 },
 ]
 
 export function ErpImplementation() {
@@ -90,11 +91,15 @@ export function ErpImplementation() {
             </g>
           </g>
 
-          {modules.map(({ label, icon: Icon, x, y }, index) => {
+          {modules.map(({ label, icon: Icon, x, y, fromX, fromY }, index) => {
             const cx = 260 + x - y
             const cy = 100 + (x + y + 82) / 2 - 30
             return (
-              <g key={label} className="erp-module" style={{ "--module-lift": `${-22 - index * 3}px` } as CSSProperties}>
+              <g
+                key={label}
+                className="erp-module"
+                style={{ "--module-x": `${fromX}px`, "--module-y": `${fromY}px`, "--module-delay": `${index * 0.1}s` } as CSSProperties}
+              >
                 <polygon points={surface(x + 2, y + 2, 82, 0)} fill="hsl(var(--foreground) / 0.07)" />
                 <Block x={x} y={y} size={82} height={30} depth={12} tone="module" topFill={`url(#${id}-module)`} />
                 <Icon x={cx - 11} y={cy - 25} width={22} height={22} className="text-primary" strokeWidth={1.5} />
