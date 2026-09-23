@@ -76,7 +76,14 @@ export function ErpImplementation() {
         <g aria-hidden="true">
           <ellipse cx="260" cy="301" rx="174" ry="46" fill="hsl(var(--primary) / 0.13)" filter={`url(#${id}-shadow)`} />
 
-          <Block x={-15} y={-15} size={230} height={-42} depth={9} tone="base" />
+          <g className="erp-business-foundation">
+            <Block x={-15} y={-15} size={230} height={-42} depth={18} tone="base" />
+            <g transform="rotate(26.565 76 277)">
+              <text x="76" y="277" className="erp-business-label" fontSize="14" fontWeight="600" letterSpacing="0.3">
+                Your Business
+              </text>
+            </g>
+          </g>
 
           <g className="erp-foundation">
             <Block x={-5} y={-5} size={210} height={-6} depth={10} tone="erp" topFill={`url(#${id}-platform)`} />
@@ -113,11 +120,10 @@ export function ErpImplementation() {
 
       <div className="mb-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground" aria-hidden="true">
         <span className="flex items-center gap-2"><span className="size-2.5 rounded-sm bg-primary" />ERP platform</span>
-        <span className="flex items-center gap-2"><span className="size-2.5 rounded-sm border border-primary/25 bg-card" />Your business</span>
+        <span className="flex items-center gap-2"><span className="erp-business-swatch size-2.5 rounded-sm border" />Your business</span>
       </div>
       <figcaption className="border-t border-primary/10 px-2 pb-1 pt-5 text-center">
         <p className="erp-caption text-sm font-medium text-primary sm:text-base">Your business. A connected system.</p>
-        <p className="mt-2 text-xs leading-relaxed text-muted-foreground">Odoo and other ERP systems.</p>
       </figcaption>
     </figure>
   )

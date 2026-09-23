@@ -5,9 +5,15 @@
 
 .erp-block { stroke-width: 0.8; }
 .erp-block-base { stroke: hsl(var(--primary) / 0.13); }
-.erp-block-base .erp-face-top { fill: hsl(var(--card)); }
+.erp-block-base .erp-face-top,
+.erp-business-swatch {
+  fill: hsl(var(--card));
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
 .erp-block-base .erp-face-left { fill: hsl(var(--muted)); }
 .erp-block-base .erp-face-right { fill: hsl(var(--border)); }
+.erp-business-label { fill: hsl(var(--primary)); color: hsl(var(--primary)); }
 .erp-block-erp { stroke: hsl(var(--primary) / 0.6); }
 .erp-block-erp .erp-face-left { fill: color-mix(in srgb, hsl(var(--primary)) 88%, black); }
 .erp-block-erp .erp-face-right { fill: color-mix(in srgb, hsl(var(--primary)) 77%, black); }
