@@ -48,7 +48,7 @@ export function HomeHero() {
           {/* Balanced Trust Indicators */}
           <ScrollReveal delay={0.3} className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-border mt-8">
             <div className="flex items-center gap-3">
-              <ShieldCheck className="size-8 text-primary shrink-0" />
+              <ShieldCheck className="size-8 text-secondary shrink-0" />
               <div>
                 <p className="font-medium text-foreground text-sm leading-tight">Business-First Advice</p>
                 <p className="text-xs text-muted-foreground">Requirements-Led Planning</p>
