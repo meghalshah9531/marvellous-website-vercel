@@ -1,0 +1,69 @@
+.erp-implementation {
+  background: radial-gradient(ellipse at 50% 40%, hsl(var(--background)) 15%, hsl(var(--card) / 0.45) 100%);
+  --erp-cycle: 12s;
+}
+
+.erp-block { stroke-width: 0.8; }
+.erp-block-base { stroke: hsl(var(--primary) / 0.13); }
+.erp-block-base .erp-face-top { fill: hsl(var(--card)); }
+.erp-block-base .erp-face-left { fill: hsl(var(--muted)); }
+.erp-block-base .erp-face-right { fill: hsl(var(--border)); }
+.erp-block-erp { stroke: hsl(var(--primary) / 0.6); }
+.erp-block-erp .erp-face-left { fill: color-mix(in srgb, hsl(var(--primary)) 88%, black); }
+.erp-block-erp .erp-face-right { fill: color-mix(in srgb, hsl(var(--primary)) 77%, black); }
+.erp-block-module { stroke: hsl(var(--primary) / 0.2); }
+.erp-block-module .erp-face-left { fill: hsl(var(--card)); }
+.erp-block-module .erp-face-right { fill: hsl(var(--muted)); }
+.erp-surface-highlight { stop-color: hsl(var(--background)); }
+.erp-surface-shade { stop-color: color-mix(in srgb, hsl(var(--background)) 65%, hsl(var(--card))); }
+.erp-platform-highlight { stop-color: color-mix(in srgb, hsl(var(--primary)) 88%, hsl(var(--background))); }
+.erp-platform-shade { stop-color: hsl(var(--primary)); }
+.erp-signal { opacity: 0; }
+
+/* One shared clock keeps assembly, the completed hold, and reset in sync. */
+@media (prefers-reduced-motion: no-preference) {
+  .erp-implementation .erp-module {
+    animation: erp-module-settle var(--erp-cycle) cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  }
+
+  .erp-implementation .erp-foundation {
+    animation: erp-foundation-slide var(--erp-cycle) cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  }
+
+  .erp-implementation .erp-connections {
+    animation: erp-connect var(--erp-cycle) ease-in-out infinite both;
+  }
+
+  .erp-implementation .erp-signal {
+    stroke-dasharray: 0.1 0.9;
+    animation: erp-signal-travel var(--erp-cycle) linear infinite both;
+  }
+
+  .erp-implementation[data-running="false"] * {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes erp-module-settle {
+  0%, 9%, 100% { transform: translateY(var(--module-lift)); opacity: 0.65; }
+  30%, 76% { transform: translateY(0); opacity: 1; }
+  94% { transform: translateY(var(--module-lift)); opacity: 0.65; }
+}
+
+@keyframes erp-foundation-slide {
+  0%, 5%, 100% { transform: translate(-18px, 9px); opacity: 0.25; }
+  22%, 80% { transform: translate(0, 0); opacity: 1; }
+  96% { transform: translate(-18px, 9px); opacity: 0.25; }
+}
+
+@keyframes erp-connect {
+  0%, 28%, 86%, 100% { opacity: 0; }
+  40%, 74% { opacity: 1; }
+}
+
+@keyframes erp-signal-travel {
+  0%, 40% { stroke-dashoffset: 0; opacity: 0; }
+  44% { opacity: 0.9; }
+  65% { stroke-dashoffset: -1; opacity: 0.9; }
+  70%, 100% { stroke-dashoffset: -1; opacity: 0; }
+}
