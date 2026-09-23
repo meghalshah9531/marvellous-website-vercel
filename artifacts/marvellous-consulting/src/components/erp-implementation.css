@@ -15,15 +15,6 @@
 .erp-block-base .erp-face-right { fill: hsl(var(--border)); }
 .erp-business-label { fill: hsl(var(--primary)); color: hsl(var(--primary)); }
 
-.dark .erp-block-base { stroke: hsl(var(--secondary) / 0.42); }
-.dark .erp-block-base .erp-face-left { fill: color-mix(in srgb, hsl(var(--secondary)) 42%, hsl(var(--background))); }
-.dark .erp-block-base .erp-face-right { fill: color-mix(in srgb, hsl(var(--secondary)) 30%, hsl(var(--background))); }
-.dark .erp-business-label { fill: hsl(var(--foreground)); color: hsl(var(--foreground)); }
-.dark .erp-business-swatch {
-  background: color-mix(in srgb, hsl(var(--secondary)) 55%, hsl(var(--card)));
-  border-color: hsl(var(--secondary) / 0.65);
-}
-
 .erp-block-erp { stroke: hsl(var(--primary) / 0.6); }
 .erp-block-erp .erp-face-left { fill: color-mix(in srgb, hsl(var(--primary)) 88%, black); }
 .erp-block-erp .erp-face-right { fill: color-mix(in srgb, hsl(var(--primary)) 77%, black); }
